@@ -1,0 +1,1 @@
+ALTER TABLE `stem_workshops` ADD `workshop_niveau` INT(1) NOT NULL DEFAULT '0' AFTER `workshop_type`;

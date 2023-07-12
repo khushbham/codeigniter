@@ -1,0 +1,2901 @@
+@charset "UTF-8";
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: none;
+}
+
+#wrapper {
+  background-position: center top;
+  background-repeat: repeat-y;
+  width: 100%;
+  min-width: 1100px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+.wrapper {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.titel {
+  display: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+p a {
+  color: #009dc6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p a:hover {
+  color: #231f20;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: var(--sa-black);
+  margin: 0 0.25em 0 0;
+  padding: 0.75em 1.5em;
+  text-transform: none !important;
+  text-shadow: none;
+  font-weight: 400;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+}
+
+a.button {
+  display: block;
+  background: url("../images/button-achtergrond.png") 0 0 no-repeat;
+  width: 280px;
+  height: 70px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #fff;
+}
+
+a.button:hover {
+  background-position: 0 -75px;
+  color: #fff;
+}
+
+a.button-smal {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 250px;
+  height: 70px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #fff;
+}
+
+a.button-smal:hover {
+  background-position: 0 -75px;
+  color: #fff;
+}
+
+a.meer {
+  font-size: 16px;
+}
+
+img {
+  border: 0;
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 100px;
+}
+
+/* Content */
+#content {
+  width: 1060px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+#inhoud,
+#vimeo-chat {
+  padding: 0 1em;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+footer .navigatie nav {
+  display: block;
+  margin: 30px 0 0 55px;
+  float: left;
+}
+
+footer .navigatie nav a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 7px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+}
+
+footer .navigatie nav a:hover {
+  color: #009dc6;
+}
+
+footer .navigatie p {
+  display: block;
+  margin: 30px 60px 0 0;
+  float: left;
+  line-height: 30px;
+}
+
+footer .navigatie p a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 7px;
+  color: #777;
+}
+
+footer .navigatie p a:hover {
+  color: #009dc6;
+}
+
+footer .navigatie p#sociale-media {
+  margin-right: 10px;
+  padding-top: 3px;
+  padding: 0px 0px 0 60px;
+  overflow: hidden;
+}
+
+footer .navigatie p#sociale-media a#twitter {
+  display: block;
+  background: url("../images/icon-twitter.jpg") 0 0 no-repeat;
+  width: 43px;
+  height: 43px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  float: left;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+footer .navigatie p#sociale-media a#facebook {
+  display: block;
+  background: url("../images/icon-facebook.jpg") 0 0 no-repeat;
+  width: 43px;
+  height: 43px;
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+footer .iamstudios {
+  padding: 20px 60px 0 60px;
+}
+
+footer .iamstudios p {
+  font-size: 10px;
+}
+
+footer .iamstudios p a {
+  font-weight: 700;
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix {
+  zoom: 1;
+}
+
+header #cursistenmodule {
+  float: left;
+}
+header #cursistenmodule .logo {
+  margin-top: 10px;
+}
+header #cursistenmodule h1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 80px;
+  color: #070707;
+}
+header #cursistenmodule h1 a {
+  font-weight: 700;
+  color: #009dc6;
+  text-decoration: none;
+}
+header #cursistenmodule h1 a:hover {
+  text-decoration: underline;
+}
+header nav {
+  margin: 30px 0 0 0;
+  float: right;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  display: block;
+  float: left;
+  color: #000;
+  line-height: 40px;
+}
+header nav ul li a {
+  display: block;
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+header nav ul li a.workshop-titel {
+  font-weight: normal;
+}
+header nav ul li a:hover, header nav ul li a.active {
+  color: #009dc6;
+}
+header nav ul li span {
+  display: block;
+  margin: 0 10px;
+  float: left;
+}
+header nav ul li#uitloggen {
+  margin-left: 40px;
+}
+
+/* Content */
+#content {
+  /* Algemeen */
+  /* Aanmelden praktijkdag */
+  /* Dashboard */
+  /* Workshops & Producten */
+  /* Lessen */
+  /* Lessen > Les */
+  /* Audio */
+  /* Berichten */
+  /* Berichten */
+  /* Vragen */
+  /* Profiel */
+  /* Profiel > Instellingen wijzigen */
+}
+#content #tabbladen_workshops {
+  position: relative;
+  margin: -51px 0 40px 0;
+  overflow: hidden;
+  max-width: 960px;
+}
+#content #tabbladen_workshops ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#content #tabbladen_workshops ul li {
+  display: block;
+  margin: 0 2px 0 0;
+  float: left;
+}
+#content #tabbladen_workshops ul li a {
+  display: block;
+  background: #e1f1f5 url("../images/tabblad_workshop.gif") 0 0 repeat-x;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #777;
+}
+#content #tabbladen_workshops ul li a.active {
+  background: #009bc3 url("../images/tabblad_workshop.gif") 0 -33px repeat-x;
+  font-weight: 600;
+  color: #fff;
+}
+#content h1 {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: #000;
+}
+#content table.lessen {
+  width: 100%;
+  margin: 30px 0 0 0;
+}
+#content table.lessen tr {
+  /*
+
+  .datum
+  {
+  	width: 80px;
+  	text-align: right;
+  }
+
+  .tijd
+  {
+  	width: 55px;
+  	text-align: right;
+  }
+
+  .locatie-iconen
+  {
+  }
+
+  .status-iconen
+  {
+  }
+
+  .locatie
+  {
+  }
+
+  .status
+  {
+  	padding-left: 40px;
+
+  }
+  */
+}
+#content table.lessen tr th {
+  font-size: 14px;
+  font-weight: 900;
+  text-align: left;
+  line-height: 25px;
+  color: #231f20;
+  padding-bottom: 20px;
+}
+#content table.lessen tr td {
+  line-height: 25px;
+  border-bottom: 1px solid #d6d6d6;
+}
+#content table.lessen tr td:first-child {
+  padding-left: 10px;
+}
+#content table.lessen tr:last-child td {
+  border: 0;
+}
+#content table.lessen tr.geweest td {
+  color: #009dc6;
+}
+#content table.lessen tr.geweest td a {
+  color: #009dc6;
+  text-decoration: none;
+}
+#content table.lessen tr.geweest td a:hover {
+  color: #231f20;
+}
+#content table.lessen tr.active td {
+  background: #b0e6f3;
+  color: #231f20;
+}
+#content table.lessen tr.active td a {
+  color: #231f20;
+  text-decoration: none;
+}
+#content table.lessen tr.breed .locatie {
+  width: 110px;
+}
+#content table.lessen tr.breed .locatie span {
+  display: block;
+  background: url("../images/icons-locatie.png") 0 0 no-repeat;
+  width: 23px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  float: left;
+}
+#content table.lessen tr.breed .locatie span.studio {
+  background-position: 0 -25px;
+}
+#content table.lessen tr.breed .datum {
+  width: 80px;
+}
+#content table.lessen tr.breed .tijd {
+  width: 75px;
+}
+#content table.lessen tr.breed .status {
+  width: 180px;
+}
+#content table.lessen tr.breed .status span {
+  display: block;
+  background: url("../images/icons-huiswerk.png") 0 0 no-repeat;
+  width: 37px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  float: left;
+}
+#content table.lessen tr.breed .status span.binnenkort {
+  background-position: 0 -25px;
+}
+#content table.lessen tr.breed .status span.insturen {
+  background-position: 0 -50px;
+}
+#content table.lessen tr.breed .status span.ingestuurd {
+  background-position: 0 -75px;
+}
+#content table.lessen tr.breed .status span.voldoende {
+  background-position: 0 -100px;
+}
+#content table.lessen tr.breed .status span.onvoldoende {
+  background-position: 0 -125px;
+}
+#content table.lessen tr.breed .status span.opnieuw-insturen {
+  background-position: 0 -150px;
+}
+#content table.lessen tr.breed .status span.opnieuw-ingestuurd {
+  background-position: 0 -175px;
+}
+#content table.lessen tr.breed .status span.opnieuw-voldoende {
+  background-position: 0 -200px;
+}
+#content table.lessen tr.breed .status span.opnieuw-onvoldoende {
+  background-position: 0 -225px;
+}
+#content table.lessen tr.smal .locatie {
+  width: 33px;
+}
+#content table.lessen tr.smal .locatie span {
+  display: block;
+  background: url("../images/icons-locatie.png") 0 0 no-repeat;
+  width: 23px;
+  height: 25px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#content table.lessen tr.smal .locatie span.studio {
+  background-position: 0 -25px;
+}
+#content table.lessen tr.smal .datum {
+  width: 80px;
+}
+#content table.lessen tr.smal .tijd {
+  width: 55px;
+}
+#content table.lessen tr.smal .status {
+  width: 57px;
+}
+#content table.lessen tr.smal .status span {
+  display: block;
+  background: url("../images/icons-huiswerk.png") 0 0 no-repeat;
+  width: 37px;
+  height: 25px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#content table.lessen tr.smal .status span.binnenkort {
+  background-position: 0 -25px;
+}
+#content table.lessen tr.smal .status span.insturen {
+  background-position: 0 -50px;
+}
+#content table.lessen tr.smal .status span.ingestuurd {
+  background-position: 0 -75px;
+}
+#content table.lessen tr.smal .status span.voldoende {
+  background-position: 0 -100px;
+}
+#content table.lessen tr.smal .status span.onvoldoende {
+  background-position: 0 -125px;
+}
+#content table.lessen tr.smal .status span.opnieuw-insturen {
+  background-position: 0 -150px;
+}
+#content table.lessen tr.smal .status span.opnieuw-ingestuurd {
+  background-position: 0 -175px;
+}
+#content table.lessen tr.smal .status span.opnieuw-voldoende {
+  background-position: 0 -200px;
+}
+#content table.lessen tr.smal .status span.opnieuw-onvoldoende {
+  background-position: 0 -225px;
+}
+#content table.praktijkdagen {
+  width: 100%;
+  margin: 0 0 16px 0;
+}
+#content table.praktijkdagen tr td {
+  background: #f7f7f7;
+  padding-left: 10px;
+  border-bottom: 4px solid #fff;
+  font-size: 14px;
+  line-height: 30px;
+  color: #c1c1c1;
+}
+#content table.praktijkdagen tr td.bullit {
+  background: #bfbfbf;
+  width: 4px;
+  border-right: 4px solid #fff;
+}
+#content table.praktijkdagen tr.active td {
+  background: #f0f0f0;
+  color: #009dc6;
+}
+#content table.praktijkdagen tr.active td.bullit {
+  background: #009dc6;
+}
+#content #aanmelden_praktijkdag {
+  padding: 40px 0 0 0;
+  color: #035063;
+}
+#content #aanmelden_praktijkdag p {
+  margin: 0 0 5px 0;
+}
+#content #aanmelden_praktijkdag p a {
+  display: block;
+  background: url("../images/button-praktijkdag.png") 0 0 no-repeat;
+  width: 149px;
+  height: 26px;
+  padding: 0 5px 0 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 28px;
+  color: #fff;
+}
+#content #aanmelden_praktijkdag p a:hover {
+  background-position: 0 -26px;
+}
+#content #komende-les {
+  width: 460px;
+  padding: 20px 0 0 0;
+  float: left;
+}
+#content #komende-les h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+}
+#content #komende-les h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #231f20;
+}
+#content #komende-les h3 {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+  color: #231f20;
+}
+#content #komende-les #omschrijving {
+  background: url("../images/recent-nieuw-schaduw.png") center bottom no-repeat;
+  padding: 20px 0 15px 0;
+}
+#content #komende-les #huiswerk {
+  padding: 35px 0 35px 0;
+  width: auto;
+  float: left;
+}
+#content #agenda {
+  width: 460px;
+  padding: 20px 0 60px 0;
+  float: right;
+}
+#content #agenda h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+}
+#content #agenda h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #231f20;
+}
+#content #agenda h3 {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+  color: #231f20;
+}
+#content #workshops,
+#content #producten {
+  width: 940px;
+  padding: 15px 0 25px 0;
+}
+#content #workshops h2,
+#content #producten h2 {
+  font-size: 21px;
+  line-height: 20px;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+#content #workshops article,
+#content #producten article {
+  background: url("../images/workshop-schaduw.png") left bottom no-repeat;
+  position: relative;
+  transition: background-color 0.5s ease;
+  min-height: 140px;
+  margin: 0 10px 25px;
+}
+#content #workshops article:hover,
+#content #producten article:hover {
+  margin: -10px 0 25px;
+  padding: 10px 10px 0;
+  background: #f7f7f7;
+}
+#content #workshops article:hover .uitgelicht,
+#content #producten article:hover .uitgelicht {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+#content #workshops article .uitgelicht,
+#content #producten article .uitgelicht {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 125px;
+  width: 210px;
+}
+#content #workshops article hgroup,
+#content #producten article hgroup {
+  display: block;
+  margin-bottom: 5px;
+  overflow: hidden;
+  padding-left: 240px;
+}
+#content #workshops article hgroup h1,
+#content #producten article hgroup h1 {
+  display: block;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #009dc6;
+}
+#content #workshops article hgroup h1 a,
+#content #producten article hgroup h1 a {
+  color: #009dc6;
+  text-decoration: none;
+}
+#content #workshops article hgroup h1 a:hover,
+#content #producten article hgroup h1 a:hover {
+  color: #000;
+}
+#content #workshops article hgroup h2,
+#content #producten article hgroup h2 {
+  display: block;
+  margin-top: 9px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #231f20;
+}
+#content #workshops article .product-beschrijving,
+#content #producten article .product-beschrijving,
+#content #workshops article .inleiding,
+#content #producten article .inleiding {
+  max-width: 600px;
+  padding-left: 240px;
+}
+#content #workshops article .product-beschrijving-lang-js,
+#content #producten article .product-beschrijving-lang-js {
+  display: none;
+}
+#content #workshops article .meer-informatie,
+#content #producten article .meer-informatie {
+  margin: 0;
+  padding-left: 240px;
+}
+#content #workshops article .clearfix,
+#content #producten article .clearfix {
+  padding-left: 240px;
+}
+#content #workshops article .clearfix .prijs,
+#content #producten article .clearfix .prijs {
+  display: inline-block;
+  width: 25%;
+  font-size: 20px;
+  line-height: 55px;
+  font-weight: 900;
+}
+#content #workshops article .clearfix .bestellen,
+#content #producten article .clearfix .bestellen {
+  display: inline-block;
+}
+#content #workshops article .aanmelden,
+#content #producten article .aanmelden {
+  margin-bottom: 10px;
+  float: right;
+}
+#content #workshops article .aanmelden a,
+#content #producten article .aanmelden a {
+  text-decoration: none;
+}
+#content #workshops article .datum,
+#content #producten article .datum {
+  font-size: 20px;
+  line-height: 55px;
+  text-align: right;
+  color: #009dc6;
+}
+#content #workshops article .datum strong,
+#content #producten article .datum strong {
+  font-weight: 900;
+  color: #000;
+}
+#content #workshops article .datum .btw,
+#content #producten article .datum .btw {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777777;
+}
+#content #workshops ul li h3,
+#content #producten ul li h3 {
+  display: block;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #009dc6;
+}
+#content #workshops ul li h3 a,
+#content #producten ul li h3 a {
+  color: #009dc6;
+  text-decoration: none;
+}
+#content #workshops ul li h3 a:hover,
+#content #producten ul li h3 a:hover {
+  color: #000;
+}
+#content #extra-workshops {
+  width: 960px;
+  padding: 15px 0 25px 0;
+  clear: both;
+  overflow: hidden;
+}
+#content #extra-workshops h1 {
+  color: #231f20;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+#content #extra-workshops h2 {
+  font-size: 21px;
+  line-height: 20px;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+#content #extra-workshops .uitgelicht {
+  max-width: 100%;
+}
+#content #extra-workshops h3 {
+  font-size: 21px;
+  line-height: 20px;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+#content #extra-workshops article {
+  background: url("../images/workshop-schaduw.png") left bottom no-repeat;
+  margin-bottom: 25px;
+  position: relative;
+  width: 300px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: background-color 0.5s ease;
+}
+#content #extra-workshops article:hover {
+  background: #f7f7f7;
+}
+#content #extra-workshops article h1 {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #009dc6;
+  padding: 10px;
+  margin-bottom: 0;
+  height: 50px;
+}
+#content #extra-workshops article h1 a {
+  color: #009dc6;
+  text-decoration: none;
+}
+#content #extra-workshops article h1 a:hover {
+  color: #000;
+}
+#content #extra-workshops article .meer-informatie,
+#content #extra-workshops article .inleiding {
+  padding: 10px;
+  margin-bottom: 0;
+}
+#content #extra-workshops article .button-smal {
+  margin: 10px;
+}
+#content #extra-workshops article:nth-child(3n+2) {
+  clear: both;
+}
+
+.plekken_beschikbaar {
+  background-color: #ff5f0d;
+  color: white;
+  display: inline-block;
+  padding: 0.5em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 1em;
+}
+
+.plekken_beschikbaar img {
+  float: left;
+  padding-right: 5px;
+  display: block;
+  margin: auto;
+  height: 10px;
+}
+
+#content #lessen {
+  padding: 20px 0 60px 0;
+}
+#content #lessen h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+}
+#content #les h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #009dc6;
+}
+#content #player {
+  display: none;
+}
+#content .audio {
+  background: #009dc6 url("../images/audio_achtergrond.jpg") 0 0 repeat-x;
+  width: 458px;
+  height: 52px;
+  border: 1px solid #fff;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px #666;
+  font-size: 14px;
+  color: #fff;
+}
+#content .audio .audio_titel {
+  position: absolute;
+  width: 298px;
+  height: 30px;
+  margin: 0 0 0 52px;
+  text-align: center;
+  line-height: 30px;
+}
+#content .audio .audiojs {
+  background: none;
+  width: 458px !important;
+  height: 52px !important;
+}
+#content .audio .audiojs .play-pause {
+  background: url("../images/audio_buttons_achtergrond.gif") top right no-repeat !important;
+  width: 40px !important;
+  height: 40px !important;
+  margin: 0 !important;
+  padding: 6px !important;
+  border: 0 !important;
+}
+#content .audio .audiojs .play-pause p {
+  background: url("../images/audiobuttons.gif") 0 0 no-repeat;
+  width: 40px;
+  height: 40px;
+}
+#content .audio .audiojs .play-pause p.play {
+  background-position: 0 -40px;
+}
+#content .audio .audiojs .play-pause p.pause {
+  background-position: 0 -80px;
+}
+#content .audio .audiojs .play-pause p.error {
+  background-position: 0 -120px;
+}
+#content .audio .audiojs .scrubber {
+  background: #46707b;
+  width: 264px;
+  height: 12px;
+  margin: 30px 10px 10px 10px;
+  padding: 0;
+  border: 0;
+}
+#content .audio .audiojs .scrubber .progress {
+  background: #fff;
+}
+#content .audio .audiojs .scrubber .loaded {
+  background: #009dc6;
+}
+#content .audio .audiojs .time {
+  background: url("../images/audio_buttons_achtergrond.gif") top left no-repeat !important;
+  width: 122px;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: none;
+  line-height: 52px;
+  color: #fff;
+}
+#content .audio.verwijderen .audio_titel {
+  width: 232px;
+}
+#content .audio.verwijderen .audio_verwijderen {
+  position: absolute;
+  background: url("../images/audio_buttons_achtergrond.gif");
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  margin: 0 0 0 406px;
+}
+#content .audio.verwijderen .audio_verwijderen a {
+  display: block;
+  background: url("../images/audiobuttons.gif") 0 -120px no-repeat;
+  width: 40px;
+  height: 40px;
+  float: left;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#content .audio.verwijderen .audiojs .scrubber {
+  width: 212px;
+}
+#content .audio.voldoende {
+  background-position: 0 -52px;
+}
+#content .audio.voldoende .audiojs .play-pause {
+  background-position: right -52px !important;
+}
+#content .audio.voldoende .audiojs .play-pause p {
+  background-position: -40px 0;
+}
+#content .audio.voldoende .audiojs .play-pause p.play {
+  background-position: -40px -40px;
+}
+#content .audio.voldoende .audiojs .play-pause p.pause {
+  background-position: -40px -80px;
+}
+#content .audio.voldoende .audiojs .play-pause p.error {
+  background-position: -40px -120px;
+}
+#content .audio.voldoende .audiojs .scrubber {
+  background: #145000;
+}
+#content .audio.voldoende .audiojs .scrubber .loaded {
+  background: #3ad204;
+}
+#content .audio.voldoende .audiojs .time {
+  background-position: left -52px !important;
+}
+#content .audio.onvoldoende {
+  background-position: 0 -104px;
+}
+#content .audio.onvoldoende .audiojs .play-pause {
+  background-position: right -104px !important;
+}
+#content .audio.onvoldoende .audiojs .play-pause p {
+  background-position: -80px 0;
+}
+#content .audio.onvoldoende .audiojs .play-pause p.play {
+  background-position: -80px -40px;
+}
+#content .audio.onvoldoende .audiojs .play-pause p.pause {
+  background-position: -80px -80px;
+}
+#content .audio.onvoldoende .audiojs .play-pause p.error {
+  background-position: -80px -120px;
+}
+#content .audio.onvoldoende .audiojs .scrubber {
+  background: #7d020d;
+}
+#content .audio.onvoldoende .audiojs .scrubber .loaded {
+  background: #f3162b;
+}
+#content .audio.onvoldoende .audiojs .time {
+  background-position: left -104px !important;
+}
+#content #buttons {
+  background: url("../images/producten-schaduw.png") center bottom no-repeat;
+  padding: 20px 0;
+  margin: 0 0 20px 0;
+}
+#content #buttons p {
+  margin: 0;
+  overflow: hidden;
+}
+#content #buttons p a,
+#content #buttons p input {
+  display: block;
+  box-sizing: content-box;
+  background: none;
+  height: 32px;
+  padding: 0 10px;
+  margin: 0 2px 0 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  float: left;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Ruda", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #000;
+}
+#content #buttons p a.belangrijk,
+#content #buttons p input.belangrijk {
+  background: url("../images/button-belangrijk-achtergrond.png") 0 0 repeat-x;
+}
+#content #buttons p a.belangrijk:hover,
+#content #buttons p input.belangrijk:hover {
+  background-position: 0 -32px;
+}
+#content table.berichten {
+  width: 100%;
+  margin: 30px 0 0 0;
+}
+#content table.berichten tr:hover td {
+  background: #b0e6f3;
+}
+#content table.berichten tr th {
+  font-size: 14px;
+  font-weight: 900;
+  text-align: left;
+  line-height: 25px;
+  color: #231f20;
+  padding-bottom: 20px;
+}
+#content table.berichten tr td {
+  line-height: 25px;
+  border-bottom: 1px solid #d6d6d6;
+}
+#content table.berichten tr td a {
+  color: #6c6b6b;
+  text-decoration: none;
+}
+#content table.berichten tr td.beantwoord.ja {
+  background: url("../images/bericht-beantwoord.gif");
+  width: 9px;
+}
+#content table.berichten tr:last-child td {
+  border: 0;
+}
+#content table.berichten tr .nieuw {
+  width: 40px;
+  text-align: center;
+}
+#content table.berichten tr .nieuw .enveloppe {
+  display: block;
+  background: url("../images/icoon-enveloppe.png") 0 -34px no-repeat;
+  width: 23px;
+  height: 25px;
+  margin: 0 auto;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#content table.berichten tr .nieuw .enveloppe.ja {
+  background: url("../images/icoon-enveloppe.png") 0 -4px no-repeat;
+}
+#content table.berichten tr .datum {
+  width: 70px;
+  text-align: right;
+}
+#content table.berichten tr .tijd {
+  width: 70px;
+  padding-right: 20px;
+  text-align: right;
+}
+#content table.berichten tr .verwijderen {
+  width: 40px;
+}
+#content table.berichten tr .verwijderen a {
+  display: block;
+  background: url("../images/icoon-verwijderen.png") 0 -2px no-repeat;
+  width: 22px;
+  height: 25px;
+  margin: 0 auto;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#content table.berichten tr .verwijderen a:hover {
+  background-position: 0 -32px;
+}
+#content #berichten {
+  padding-bottom: 60px;
+  /* Berichten > Nieuw bericht */
+  /* Berichten > Bericht */
+}
+#content #berichten form p {
+  margin: 0 0 5px 0;
+  overflow: hidden;
+}
+#content #berichten form p label {
+  display: block;
+  width: 115px;
+  float: left;
+  font-weight: 900;
+  color: #231f20;
+  line-height: 25px;
+}
+#content #berichten form p select {
+  display: block;
+  background: #fff;
+  width: 340px;
+  height: 25px;
+  padding: 2px 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  float: left;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6c6b6b;
+}
+#content #berichten form p input[type=text] {
+  display: block;
+  width: 322px;
+  height: 23px;
+  padding: 0 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  float: left;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+}
+#content #berichten form p textarea {
+  display: block;
+  width: 692px;
+  height: 219px;
+  padding: 2px 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  resize: none;
+  overflow: auto;
+  float: left;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #6c6b6b;
+}
+#content #berichten form p .mce-tinymce {
+  float: left;
+}
+#content #berichten #bericht div {
+  overflow: hidden;
+}
+#content #berichten form p .mce-tinymce {
+  float: left;
+  box-sizing: border-box;
+}
+#content #berichten #bericht div .label {
+  display: block;
+  width: 115px;
+  float: left;
+  font-weight: 900;
+  color: #231f20;
+  line-height: 25px;
+}
+#content #berichten #bericht div .tekst {
+  line-height: 25px;
+  width: 825px;
+  float: left;
+}
+#content #vragen h1 {
+  display: block;
+  width: 680px;
+  margin: 0 0 30px 0;
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: #000;
+}
+#content #vragen ol {
+  margin: 0 0 50px 0;
+  padding: 0;
+}
+#content #vragen ol li {
+  font-weight: 900;
+  color: #231f20;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+#content #vragen ol li a {
+  color: #231f20;
+}
+#content #vragen ol li a:hover {
+  color: #009dc6;
+}
+#content #vragen article {
+  background: url("../images/overons-schaduw.png") left bottom no-repeat;
+  padding: 0 0 15px 0;
+  overflow: hidden;
+}
+#content #vragen article .media {
+  padding: 40px 0 0 0;
+  float: right;
+}
+#content #vragen article .vraag_antwoord {
+  width: 680px;
+  float: left;
+}
+#content #vragen article .vraag_antwoord h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 15px;
+  padding-top: 35px;
+}
+#content #vragen .contact {
+  display: block;
+  margin: 50px 0 130px 0;
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: #009dc6;
+}
+#content #vragen .contact a {
+  text-decoration: underline;
+}
+#content #profiel {
+  overflow: hidden;
+  /* Profiel > Wijzigen */
+}
+#content #profiel #profiel_gegevens {
+  width: 620px;
+  padding: 15px 0 0 0;
+  float: left;
+}
+#content #profiel #profiel_gegevens p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #000;
+}
+#content #profiel form {
+  padding: 20px 0 0 0;
+}
+#content #profiel form p {
+  margin: 0 0 5px 0;
+  overflow: hidden;
+}
+#content #profiel form p label {
+  display: block;
+  width: 140px;
+  line-height: 25px;
+  float: left;
+}
+#content #profiel form p input[type=text], #content #profiel form p input[type=password] {
+  display: block;
+  width: 482px;
+  height: 23px;
+  padding: 0 8px;
+  margin: 0 10px 0 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  float: left;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #6c6b6b;
+}
+#content #profiel form p input[type=text].datum_smal, #content #profiel form p input[type=password].datum_smal {
+  width: 40px;
+  padding: 0;
+  margin: 0 5px 0 0;
+  text-align: center;
+}
+#content #profiel form p input[type=text].datum_breed, #content #profiel form p input[type=password].datum_breed {
+  width: 60px;
+  padding: 0;
+  text-align: center;
+}
+#content #profiel form p .radio_buttons {
+  margin: 0 10px 0 0;
+  float: left;
+}
+#content #profiel form p.feedback {
+  padding-left: 140px;
+  color: #f33;
+}
+#content #profiel form p input[type=submit] {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 260px;
+  height: 75px;
+  margin: 20px 0 135px 385px;
+  padding: 0 20px 20px 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 55px;
+  text-align: center;
+  color: #fff;
+}
+#content #profiel form p input[type=submit]:hover {
+  background-position: 0 -75px;
+}
+#content #profiel form p .feedback {
+  display: block;
+  float: left;
+  line-height: 25px;
+  color: #f33;
+}
+#content #profiel form p.verplicht {
+  color: #009dc6;
+  padding-left: 140px;
+}
+#content #profiel_instellingen form {
+  padding: 20px 0 0 0;
+}
+#content #profiel_instellingen form p.feedback {
+  padding-top: 10px;
+  color: #f33;
+}
+#content #profiel_instellingen form #instellingen p {
+  display: block;
+  width: 620px;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  line-height: 50px;
+  overflow: hidden;
+}
+#content #profiel_instellingen form #instellingen p:first-child {
+  border-top: 1px solid #ccc;
+}
+#content #profiel_instellingen form #instellingen p label {
+  float: left;
+}
+#content #profiel_instellingen form #instellingen p .radios {
+  display: block;
+  float: right;
+}
+#content #aanmelden #stappen ol,
+#content #bestellen #stappen ol {
+  display: block;
+  background: #fafafa;
+  width: 918px;
+  height: 48px;
+  margin: 0 0 40px 0;
+  padding: 0 0 0 20px;
+  border: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+#content #aanmelden #stappen ol li,
+#content #bestellen #stappen ol li {
+  display: block;
+  background: url("../images/aanmelden-pijl.gif") left center no-repeat;
+  height: 48px;
+  margin: 0 70px 0 0;
+  padding: 0 0 0 30px;
+  list-style: none;
+  float: left;
+  color: #9a9a9a;
+  line-height: 48px;
+}
+#content #aanmelden #stappen ol li a,
+#content #bestellen #stappen ol li a {
+  font-weight: 400;
+  color: #231f20;
+}
+#content #aanmelden #stappen ol li a:hover,
+#content #bestellen #stappen ol li a:hover {
+  color: #009dc6;
+}
+#content #aanmelden #stappen ol li:first-child,
+#content #bestellen #stappen ol li:first-child {
+  background: none;
+  padding: 0;
+}
+#content #aanmelden #stappen ol li.active,
+#content #bestellen #stappen ol li.active {
+  font-weight: 900;
+  color: #231f20;
+}
+#content #uitleg p {
+  width: 660px;
+}
+#content #formulier_vraag {
+  padding: 0 0 10px 160px;
+}
+#content #formulier_lang h3 {
+  padding-left: 160px;
+}
+#content #formulier_lang .startdatum {
+  display: block;
+  line-height: 25px;
+  float: left;
+}
+#content #formulier_lang.onzichtbaar {
+  display: none;
+}
+#content #formulier_kort {
+  display: none;
+}
+#content #formulier_kort h3 {
+  padding-left: 160px;
+}
+#content #formulier_kort .startdatum {
+  display: block;
+  line-height: 25px;
+  float: left;
+}
+#content #formulier_kort.zichtbaar {
+  display: block;
+}
+#content #aanmelden h1,
+#content #bestellen h1 {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: #009dc6;
+  margin-bottom: 20px;
+}
+#content #aanmelden h2,
+#content #bestellen h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #009dc6;
+}
+#content #aanmelden h3,
+#content #bestellen h3 {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+  color: #231f20;
+}
+#content #aanmelden table,
+#content #bestellen table {
+  margin: 0 0 20px 0;
+}
+#content #aanmelden form p,
+#content #bestellen form p {
+  margin: 0 0 5px 0;
+  overflow: hidden;
+}
+#content #aanmelden form p label,
+#content #bestellen form p label {
+  display: block;
+  width: 160px;
+  line-height: 25px;
+  float: left;
+}
+#content #aanmelden form p input[type=text], #content #aanmelden form p input[type=password] {
+  display: block;
+  width: 478px;
+  height: 23px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid #e2e2e2;
+  outline: 0;
+  float: left;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  color: #777;
+}
+#content #bestellen form p input[type=text], #content #bestellen form p input[type=password] {
+  display: block;
+  width: 478px;
+  height: 23px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid #e2e2e2;
+  outline: 0;
+  float: left;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  color: #777;
+}
+#content #producten form p input[type=submit] {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 260px;
+  height: 55px;
+  margin: 20px 0 135px 405px;
+  padding: 0 20px 20px 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 55px;
+  text-align: center;
+  color: #fff;
+}
+#content #producten form p input[type=submit]:hover {
+  background-position: 0 -75px;
+}
+#content #aanmelden form p input[type=text]#aanmelden_geboortedatum_dag {
+  width: 36px;
+  padding: 0;
+  margin-right: 5px;
+  text-align: center;
+}
+
+#uitgebreide_les {
+  margin-bottom: 20px;
+}
+
+#uitgebreide_les h3 {
+  text-transform: uppercase;
+  color: #000;
+}
+
+.link-wrapper {
+  overflow: hidden;
+}
+
+#uitgebreid_huiswerk h3 {
+  text-transform: uppercase;
+  color: #000;
+}
+
+#content .meta {
+  font-size: 125%;
+  text-transform: uppercase;
+}
+#content #les h3 {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+#content #les #omschrijving {
+  width: 44.4444444444%;
+  float: left;
+  margin-right: 11.1111111111%;
+  padding: 20px 0 60px 0;
+}
+#content #les #omschrijving #media .media p img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+#content #les #omschrijving #media .media p.pdf {
+  display: block;
+  background: url("../images/icon-pdf.jpg") no-repeat;
+  height: 77px;
+  line-height: 50px;
+  padding: 0 0 0 60px;
+}
+
+#huiswerk {
+  width: 44.4444444444%;
+  float: right;
+  margin-right: 0;
+  padding: 20px 0 60px 0;
+}
+#huiswerk form {
+  padding: 10px 0 0 0;
+}
+#huiswerk form p {
+  margin: 0 0 5px 0;
+  overflow: hidden;
+  line-height: 25px;
+}
+#huiswerk form p label {
+  display: block;
+  width: 115px;
+  float: left;
+  color: #231f20;
+  line-height: 35px;
+}
+#huiswerk form p input[type=text] {
+  display: block;
+  width: 325px;
+  height: 33px;
+  padding: 0 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  float: left;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #6c6b6b;
+}
+#huiswerk form p input[type=text] ::-webkit-input-placeholder {
+  /* Edge */
+  color: #6c6b6b;
+}
+#huiswerk form p input[type=text] :-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #6c6b6b;
+}
+#huiswerk form p input[type=text] ::placeholder {
+  color: #6c6b6b;
+}
+#huiswerk form p #browse {
+  width: 325px;
+  height: 33px;
+  padding: 0 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  float: left;
+  line-height: 33px;
+}
+#huiswerk form p input[type=submit]#uploaden {
+  display: block;
+  background: url("../images/button_uploaden.png");
+  width: 271px;
+  height: 69px;
+  margin: 15px 0 0 112px;
+  padding: 0 21px 14px 3px;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-family: "Ruda", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 59px;
+  color: #fff;
+}
+#huiswerk form p input[type=submit]#uploaden:hover {
+  background-position: 0 -69px;
+}
+#huiswerk form p input[type=submit]#insturen {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 270px;
+  height: 75px;
+  margin: 0;
+  padding: 0 20px 20px 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #fff;
+}
+#huiswerk form p input[type=submit]#insturen:hover {
+  background-position: 0 -75px;
+}
+#huiswerk #feedback {
+  padding: 0 0 0 115px;
+  margin-bottom: 1em;
+  color: #f33;
+}
+#huiswerk #feedback p {
+  margin: 0;
+}
+#huiswerk #toegevoegd {
+  position: absolute;
+  width: auto;
+  height: 55px;
+  margin: -74px 0 0 373px;
+  text-transform: uppercase;
+  line-height: 55px;
+  color: #231f20;
+}
+
+/* Aanmelden / Bestellen */
+#aanmelden form p input[type=text]#aanmelden_geboortedatum_maand,
+#content #bestellen form p input[type=text]#bestellen_geboortedatum_dag,
+#bestellen form p input[type=text]#bestellen_geboortedatum_maand {
+  width: 36px;
+  padding: 0;
+  margin-right: 5px;
+  text-align: center;
+}
+
+#content #aanmelden form p input[type=text]#aanmelden_geboortedatum_jaar,
+#content #bestellen form p input[type=text]#bestellen_geboortedatum_jaar {
+  width: 50px;
+  padding: 0;
+  text-align: center;
+}
+#content #aanmelden form p #geslacht_container,
+#content #bestellen form p #geslacht_container {
+  display: block;
+  width: 138px;
+  height: 25px;
+  float: left;
+}
+#content p.akkoord_container {
+  padding: 10px 0 0 160px;
+  line-height: 25px;
+  overflow: hidden;
+}
+#content p.akkoord_container .akkoord {
+  display: block;
+  float: left;
+}
+#content p.akkoord_container a {
+  color: #777;
+  text-decoration: underline;
+}
+#content p.akkoord_container a:hover {
+  color: #009dc6;
+}
+#content form p .feedback {
+  display: block;
+  margin: 0 0 0 10px;
+  float: left;
+  color: #f33;
+  line-height: 25px;
+}
+#content #aanmelden form p input[type=submit],
+#content #bestellen form p input[type=submit] {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 260px;
+  height: 55px;
+  margin: 20px 0 135px 405px;
+  padding: 0 20px 20px 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 55px;
+  text-align: center;
+  color: #fff;
+}
+#content #aanmelden form p input[type=submit]:hover,
+#content #bestellen form p input[type=submit]:hover {
+  background-position: 0 -75px;
+}
+#content #aanmelden #producten {
+  padding: 10px 0 40px 0;
+}
+#content #aanmelden #producten article {
+  background: url("../images/producten-schaduw.png") 0 bottom no-repeat;
+  margin: 0 0 40px 0;
+  padding: 0 0 5px 0;
+}
+#content #aanmelden #producten article h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #009dc6;
+}
+#content #aanmelden #producten article p {
+  margin-bottom: 25px;
+}
+#content #aanmelden #producten article .media {
+  width: 300px;
+  height: 185px;
+  border: 1px solid #d9d9d9;
+  float: right;
+}
+#content #aanmelden #producten article .tekst {
+  width: 480px;
+  float: left;
+}
+#content #aanmelden #producten article .prijs {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 30px;
+  text-align: right;
+  color: #231f20;
+  padding: 0 250px 0 0;
+  float: right;
+}
+#content #aanmelden #producten article .annulering_prijs {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 30px;
+  text-align: center;
+  color: #231f20;
+}
+#content #aanmelden #producten article .bestellen {
+  font-size: 20px;
+  line-height: 30px;
+  color: #231f20;
+  float: left;
+}
+#content #aanmelden #afleveradres p strong {
+  display: block;
+  font-weight: 900;
+  color: #231f20;
+  padding-bottom: 20px;
+}
+#content #aanmelden #gegevens {
+  width: 660px;
+}
+#content #bestellen #gegevens {
+  width: 660px;
+}
+#content #aanmelden #gegevens table tr th,
+#content #bestellen #gegevens table tr th,
+#content #aanmelden #gegevens table tr td,
+#content #bestellen #gegevens table tr td {
+  line-height: 30px;
+  border-bottom: 1px solid #eee;
+}
+#content #aanmelden #gegevens table tr th,
+#content #bestellen #gegevens table tr th {
+  width: 160px;
+  font-weight: 400;
+  text-align: left;
+  color: #231f20;
+}
+#content #aanmelden #gegevens table tr:first-child th,
+#content #bestellen #gegevens table tr:first-child th,
+#content #aanmelden #gegevens table tr:first-child td,
+#content #bestellen #gegevens table tr:first-child td {
+  border-top: 1px solid #eee;
+}
+#content #aanmelden #bestelling,
+#content #bestellen #bestelling {
+  width: 660px;
+}
+#content #aanmelden #bestelling table tr td,
+#content #bestellen #bestelling table tr td {
+  background: url("../images/bestelling-check.gif") 0 0 no-repeat;
+  font-size: 22px;
+  line-height: 40px;
+  color: #009dc6;
+  padding-left: 30px;
+  border-top: 1px solid #eee;
+}
+#content #aanmelden #bestelling table tr td.prijs,
+#content #bestellen #bestelling table tr td.prijs {
+  background: none;
+  text-align: right;
+}
+#content #aanmelden #bestelling table tr td.prijs .btw,
+#content #bestellen #bestelling table tr td.prijs .btw {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777777;
+}
+#content #aanmelden #bestelling table tr.totaal td,
+#content #bestellen #bestelling table tr.totaal td {
+  background: none;
+  font-weight: 900;
+  color: #231f20;
+  padding: 0;
+}
+
+/* Aanmelden > Producten */
+/* Aanmelden > Bevestigen */
+#les #omschrijving #toevoegen_wijzigen form p input[type=submit] {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 270px;
+  height: 75px;
+  margin: 0;
+  padding: 0 20px 20px 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #fff;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form .aanwezigheid {
+  margin: auto;
+  width: 95%;
+  border-radius: 4px;
+  float: left;
+  border: 2px solid grey;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form .aanwezigheid span {
+  vertical-align: sub;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form .aanwezigheid span.submit input {
+  float: right;
+  background-color: #18b5cf;
+  clear: both;
+  border: 0 none;
+  border-radius: 4px;
+  transition: all 0.23s ease-in-out 0s;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: normal;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 22px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form .aanwezigheid span.submit input:hover {
+  background-color: #009dc6;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form div.aanwezigheid {
+  width: 95%;
+  line-height: 30px;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form .aanwezigheid {
+  margin: auto;
+  width: 95%;
+  border-radius: 4px;
+  float: left;
+  border: 2px solid grey;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form .aanwezigheid span {
+  vertical-align: sub;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form .aanwezigheid span.submit input {
+  float: right;
+  background-color: #18b5cf;
+  clear: both;
+  border: 0 none;
+  border-radius: 4px;
+  transition: all 0.23s ease-in-out 0s;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: normal;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 22px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form .aanwezigheid span.submit input:hover {
+  background-color: #009dc6;
+}
+#les.clearfix #omschrijving #toevoegen_wijzigen.formulier form div.aanwezigheid {
+  width: 95%;
+  line-height: 30px;
+}
+
+ul.tab {
+  width: 102.6%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+ul.tab li {
+  float: left;
+}
+ul.tab li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+ul.tab li a:hover {
+  background-color: #ddd;
+}
+ul.tab li a:focus {
+  background-color: #ccc;
+}
+
+/* Float the list items side by side */
+/* Style the links inside the list items */
+/* Change background color of links on hover */
+/* Create an active/current tablink class */
+/* Style the tab content */
+.tabcontent {
+  width: 100%;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+#content .tabel tr td.archiveren {
+  width: 22px;
+  padding-left: 5px;
+}
+#content .tabel tr td.archiveren a {
+  display: block;
+  background: url(../images/icon-archive.png);
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#content .tabel tr td.dearchiveren {
+  width: 22px;
+  padding-left: 5px;
+}
+#content .tabel tr td.dearchiveren a {
+  display: block;
+  background: url(../images/icon-dearchive.png);
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+#recordingslist {
+  display: block;
+}
+
+#audio_record > label {
+  display: block;
+  margin-bottom: 40px;
+  width: 115px;
+  float: left;
+  color: #231f20;
+  line-height: 35px;
+}
+
+#button_opnemen {
+  background-color: #27b400;
+  color: white;
+  padding: 10px;
+  margin-right: 4px;
+  margin-bottom: 20px;
+}
+
+#button_stop {
+  background-color: #ff3848;
+  color: white;
+  padding: 10px;
+}
+
+#button_opnemen:disabled {
+  background-color: #27b400;
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: white;
+  padding: 10px;
+}
+
+#button_stop:disabled {
+  background-color: #ff3848;
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#recordingslist p {
+  line-height: 15px !important;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  width: 10em;
+}
+.rating input {
+  position: absolute;
+  left: -999999px;
+}
+.rating label {
+  display: inline-block;
+  font-size: 0;
+}
+.rating > label:before {
+  position: relative;
+  font: 24px/1 FontAwesome;
+  display: block;
+  content: "";
+  color: #ccc;
+  background: -webkit-linear-gradient(-45deg, #d9d9d9 0%, #b3b3b3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+  color: #f0ad4e;
+  background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rating > label.selected:before,
+.rating > label.selected ~ label:before {
+  color: #f0ad4e;
+  background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vorige_les_rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  width: 10em;
+}
+.vorige_les_rating input {
+  position: absolute;
+  left: -999999px;
+}
+.vorige_les_rating label {
+  display: inline-block;
+  font-size: 0;
+}
+.vorige_les_rating > label:before {
+  position: relative;
+  font: 24px/1 FontAwesome;
+  display: block;
+  content: "";
+  color: #ccc;
+  background: -webkit-linear-gradient(-45deg, #d9d9d9 0%, #b3b3b3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vorige_les_rating > label:hover:before,
+.vorige_les_rating > label:hover ~ label:before {
+  color: #f0ad4e;
+  background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vorige_les_rating > label.selected:before,
+.vorige_les_rating > label.selected ~ label:before {
+  color: #f0ad4e;
+  background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.white-button {
+  border-radius: 15px;
+  border: 1px solid #000;
+  padding: 15px 30px 15px 30px;
+  cursor: pointer;
+  color: #000;
+}
+
+#tab {
+  list-style: none;
+  cursor: pointer;
+  -webkit-padding-start: 0px;
+  padding: 0px !important;
+}
+#tab label {
+  border-radius: 15px;
+  border: 1px solid #000;
+  padding: 15px 50px 15px 30px;
+  cursor: pointer;
+}
+#tab li.active {
+  background-color: #ccc0;
+}
+#tab li div.content {
+  display: none;
+}
+#tab li.active div.content {
+  display: inherit;
+}
+#tab > li.active > label > span.arrow {
+  transform: rotate(90deg);
+}
+
+.iamstudios .privacy_link a {
+  color: gray;
+  text-decoration-color: gray;
+  text-decoration: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mymodal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close-modal {
+  display: block;
+  background: #231f20;
+  padding: 0 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  line-height: 30px;
+  color: #fff;
+  float: right;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-content h3,
+.modal-content p,
+.modal-content h4 {
+  margin: 0 0 20px 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rating_opmerking {
+  display: none;
+  margin: 0 20px 0 20px;
+}
+.rating_opmerking h4 {
+  margin-top: 0px;
+}
+
+#beoordeling_tekst {
+  width: 100%;
+  height: 50px;
+}
+
+.algemeen {
+  display: block;
+  background: #231f20;
+  padding: 0 10px;
+  margin: 10px 0 0 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  line-height: 30px;
+  color: #fff;
+}
+
+.kandidaat_welkom_tekst {
+  margin-bottom: 20px;
+}
+.kandidaat_welkom_tekst p {
+  margin: 10px 0px 0px 0px;
+}
+
+#content #aanmelden #producten article .annulering_prijs {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 30px;
+  text-align: center;
+  color: #231f20;
+}
+
+/* cursistenmodule update */
+#content_uitgebreid {
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+}
+
+#uitgebreid_huiswerk {
+  padding: 20px 0 60px 0;
+  display: block;
+}
+#uitgebreid_huiswerk form {
+  padding: 10px 0 0 0;
+}
+#uitgebreid_huiswerk form p {
+  margin: 0 0 5px 0;
+  overflow: hidden;
+  line-height: 25px;
+}
+#uitgebreid_huiswerk form p label {
+  display: block;
+  width: 115px;
+  float: left;
+  color: #231f20;
+  line-height: 35px;
+}
+#uitgebreid_huiswerk form p input[type=text] {
+  display: block;
+  width: 325px;
+  height: 33px;
+  padding: 0 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  float: left;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #6c6b6b;
+}
+#uitgebreid_huiswerk form p input[type=text] ::-webkit-input-placeholder {
+  /* Edge */
+  color: #6c6b6b;
+}
+#uitgebreid_huiswerk form p input[type=text] :-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #6c6b6b;
+}
+#uitgebreid_huiswerk form p input[type=text] ::placeholder {
+  color: #6c6b6b;
+}
+#uitgebreid_huiswerk form p #browse {
+  width: 325px;
+  height: 33px;
+  padding: 0 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  float: left;
+  line-height: 33px;
+}
+#uitgebreid_huiswerk form p input[type=submit]#uploaden {
+  display: block;
+  background: url("../images/button_uploaden.png");
+  width: 271px;
+  height: 69px;
+  margin: 15px 0 0 112px;
+  padding: 0 21px 14px 3px;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-family: "Ruda", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 59px;
+  color: #fff;
+}
+#uitgebreid_huiswerk form p input[type=submit]#uploaden:hover {
+  background-position: 0 -69px;
+}
+#uitgebreid_huiswerk form p input[type=submit]#insturen {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 270px;
+  height: 75px;
+  margin: 0;
+  padding: 0 20px 20px 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #fff;
+}
+#uitgebreid_huiswerk form p input[type=submit]#insturen:hover {
+  background-position: 0 -75px;
+}
+#uitgebreid_huiswerk form #toegevoegd {
+  position: absolute;
+  width: auto;
+  height: 55px;
+  margin: -74px 0 0 373px;
+  text-transform: uppercase;
+  line-height: 55px;
+  color: #231f20;
+}
+#uitgebreid_huiswerk #feedback {
+  padding: 0 0 0 115px;
+  margin-bottom: -10px;
+  color: #f33;
+}
+#uitgebreid_huiswerk #feedback p {
+  margin: 0;
+}
+
+.dropbtn {
+  color: black;
+  border: none;
+  cursor: pointer;
+  float: none;
+  background-color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.links-workshops a {
+  color: #009bc3;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 170px;
+  float: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  line-height: 20px;
+  right: 0px;
+}
+.dropdown-content .active {
+  color: orange;
+  background-color: white;
+}
+.dropdown-content a {
+  color: black;
+  font-weight: normal;
+  padding: 5px 16px;
+  float: none;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: orange;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+a span#nieuw {
+  color: #fff;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: text-bottom;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  float: right;
+  background: #c23b17;
+  margin: 2px 0 0;
+}
+a span#profile {
+  background: url("../images/avatar.jpg") 0 0 no-repeat;
+  width: 20px;
+  height: 20px;
+  margin: 8px 8px 8px 3px;
+  float: right;
+}
+a span#profile.has-badge {
+  background: url("../images/avatar-has-badge.jpg") 0 0 no-repeat;
+}
+
+.video-header {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.vimeo-video-container {
+  padding-bottom: 56.25%;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.vimeo-iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#vimeo-chat-iframe {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  transition: display 1s ease-in-out;
+}
+
+#vimeo-chat-iframe.closed {
+  display: none;
+}
+
+#toggle-vimeo-chat .closed,
+#toggle-vimeo-chat.closed .open {
+  display: none;
+}
+
+#toggle-vimeo-chat.closed .closed,
+#toggle-vimeo-chat .open {
+  display: inline-block;
+}
+
+.video-header-omschrijving p {
+  max-width: 80%;
+  float: left;
+}
+.video-header-omschrijving .rating {
+  float: right;
+}
+
+.les {
+  padding: 1em 0;
+  transition: background-color 0.5s ease, margin 0.25s ease, padding 0.25s ease;
+}
+.les:hover, .les.active {
+  background: #f7f7f7;
+}
+.les p:last-child {
+  margin-bottom: 0;
+}
+.les .locatie {
+  display: block;
+  background: url("../images/icons-locatie.png") 0 0 no-repeat;
+  width: 23px;
+  height: 25px;
+  margin: -2px 10px 0 0;
+  float: left;
+  text-indent: -9999px;
+}
+.les .locatie.studio {
+  background-position: 0 -25px;
+}
+
+.les--links {
+  width: 66.1016949153%;
+  float: left;
+  margin-right: 1.6949152542%;
+}
+
+.les--rechts {
+  width: 23.7288135593%;
+  float: right;
+  margin-right: 0;
+  padding-top: 1em;
+}
+
+.text-decoration-none,
+.text-decoration-none:hover {
+  text-decoration: none;
+  color: #009dc6;
+}
+
+.les-documents {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.les-quiz {
+  height: 77px;
+}
+
+.les-document {
+  width: 160px;
+  margin-bottom: 3rem;
+}
+
+.document-pdf {
+  margin: 0 auto;
+  padding-right: 10px;
+}
+
+.huiswerk {
+  height: 300px;
+}
+
+.button-orange {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: orange;
+  padding: 5px 15px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.button-orange:hover {
+  background: #e69500;
+}
+
+.button-grey {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: #d5d5d5;
+  padding: 5px 15px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.button-grey:hover {
+  background: #c8c8c8;
+}
+
+.sidenav {
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  background-color: #111;
+  width: 0px;
+  overflow-x: hidden;
+  padding-top: 5px;
+  transition: 0.5s;
+}
+
+.sidenav-item {
+  position: relative;
+}
+
+.highlight {
+  position: absolute;
+  background-color: orange;
+  width: 5px;
+  height: 100%;
+}
+
+.sidenav a {
+  padding: 1em;
+  text-align: left;
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav .titel {
+  font-size: 125%;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  display: block;
+}
+.sidenav p {
+  margin: 0;
+}
+.sidenav a:hover {
+  color: orange;
+}
+.sidenav hr {
+  margin: 0 auto;
+  width: 90%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.mySlides {
+  display: none;
+}
+
+.slide-center {
+  text-align: center;
+}
+
+.slide-section {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.slide-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+  background-color: #f1f1f1;
+  white-space: nowrap;
+}
+
+.s-button-orange {
+  color: #fff;
+  background-color: orange;
+}
+.s-button-orange:hover {
+  color: #fff;
+  background-color: orange;
+}
+
+hr.gradient {
+  margin: 0 auto;
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(178, 178, 178, 0.25), #b2b2b2, rgba(178, 178, 178, 0.25));
+}
+hr.gradient:last-child {
+  display: none;
+}
+
+img.placeholder {
+  width: 100%;
+}
+
+.studioles {
+  margin-top: 1em;
+}
+.studioles .datum-tijd {
+  width: 28.5714285714%;
+  float: left;
+  margin-right: 7.1428571429%;
+}
+.studioles .adres {
+  width: 28.5714285714%;
+  float: left;
+  margin-right: 7.1428571429%;
+}
+.studioles .huiswerk-status {
+  width: 28.5714285714%;
+  float: right;
+  margin-right: 0;
+}
+.studioles .huiswerk-status span {
+  display: inline-block;
+  background: url("../images/icons-huiswerk.png") 0 0 no-repeat;
+  width: 37px;
+  height: 25px;
+  margin: -5px 0 0 10px;
+  vertical-align: middle;
+}
+.studioles .huiswerk-status span.binnenkort {
+  background-position: 0 -25px;
+}
+.studioles .huiswerk-status span.insturen {
+  background-position: 0 -50px;
+}
+.studioles .huiswerk-status span.ingestuurd {
+  background-position: 0 -75px;
+}
+.studioles .huiswerk-status span.voldoende {
+  background-position: 0 -100px;
+}
+.studioles .huiswerk-status span.onvoldoende {
+  background-position: 0 -125px;
+}
+.studioles .huiswerk-status span.opnieuw-insturen {
+  background-position: 0 -150px;
+}
+.studioles .huiswerk-status span.opnieuw-ingestuurd {
+  background-position: 0 -175px;
+}
+.studioles .huiswerk-status span.opnieuw-voldoende {
+  background-position: 0 -200px;
+}
+.studioles .huiswerk-status span.opnieuw-onvoldoende {
+  background-position: 0 -225px;
+}
+
+/*# sourceMappingURL=cursistenmodule.css.map */

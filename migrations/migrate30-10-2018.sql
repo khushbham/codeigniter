@@ -1,0 +1,1 @@
+ALTER TABLE `stem_berichten` ADD `bericht_no_reply` INT(1) NOT NULL DEFAULT '0' AFTER `bericht_verwijderd_afzender`;

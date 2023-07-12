@@ -1,0 +1,1 @@
+ALTER TABLE `stem_groepen` ADD `groep_feedback_mail` INT(1) NOT NULL DEFAULT '1' AFTER `groep_archief_datum`;

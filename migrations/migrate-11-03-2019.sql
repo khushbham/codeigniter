@@ -1,0 +1,1 @@
+ALTER TABLE `stem_workshops` ADD `workshop_soort` ENUM('normaal','uitgebreid','','') NOT NULL ;

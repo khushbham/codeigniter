@@ -1,0 +1,2925 @@
+/**
+ *
+ * localhost 2020
+ *
+ */
+
+:root {
+  /* Primary colours */
+  --sa-blue: #009dc6;
+  --sa-orange: #ff9c00;
+  --sa-black: #000000;
+}
+
+@import "susy";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--sa-black);
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: none;
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 50em) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .vzaar-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.h1,
+h1 {
+  font-size: 2.5rem;
+}
+
+.h2,
+h2 {
+  font-size: 2rem;
+}
+
+.h3,
+h3 {
+  font-size: 1.75rem;
+}
+
+.h4,
+h4 {
+  font-size: 1.5rem;
+}
+
+a[href^="tel"] {
+  color: inherit; /* Inherit text color of parent element. */
+  text-decoration: none; /* Remove underline. */
+}
+
+.vzaar-video-embed {
+  @include aspect-ratio(16, 9);
+  border: 10px solid #fff;
+}
+
+#reactie .vzaar-video-embed {
+  margin-bottom: 1em;
+}
+
+.wrapper {
+  @include container(76em);
+}
+
+.titel {
+  display: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+p a {
+  color: var(--sa-orange);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p a:hover {
+  color: #231f20;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: var(--sa-black);
+  margin: 0 0.25em 0.25em 0;
+  padding: 0.75em 1.5em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 0 1px transparent inset,
+    0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease,
+    color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
+    background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
+    box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
+    box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button--lg {
+  font-size: 1.5em;
+  padding: 1em 1.5em;
+}
+
+.button--orange {
+  background-color: var(--sa-orange);
+  color: #ffffff;
+}
+
+.button--aanmelden {
+  margin-bottom: 1em;
+  font-size: 1.25em;
+  padding: 1em;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+.plekken_beschikbaar {
+  background-color: #ff5f0d;
+  color: white;
+  display: inline-block;
+  padding: 0.5em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-bottom: 1em;
+}
+
+.plekken_beschikbaar img {
+  float: left;
+  padding-right: 5px;
+  display: block;
+  margin: auto;
+  height: 10px;
+}
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
+.header {
+  padding: 1em;
+
+  @include breakpoint(phablet) {
+    padding-bottom: 2em;
+  }
+
+  @media (min-width: 1025px) {
+    padding-bottom: 1em;
+  }
+}
+
+.header--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header nav ul li {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header nav ul li a {
+  color: var(--sa-black);
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  float: left;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.logo {
+  text-align: center;
+  @media (max-width: 64em) {
+    flex: 0 0 100%;
+    margin-bottom: 1em;
+  }
+}
+
+.main-menu {
+  flex-grow: 1;
+
+  @include breakpoint(mobile) {
+    flex: 0 0 100%;
+    margin-bottom: 1em;
+  }
+}
+
+.authenticate,
+.authenticated-menu {
+  @media (max-width: 64em) {
+    flex-grow: 1;
+  }
+  @include breakpoint(mobile) {
+    flex: 0 0 100%;
+    margin-bottom: 1em;
+  }
+}
+
+.authenticate-feedback {
+  @include breakpoint(mobile) {
+    flex: 0 0 100%;
+    justify-content: space-evenly;
+  }
+}
+
+.authenticated-menu {
+  ul li:not(:last-child) {
+    border-right: 1px solid;
+    padding-right: 1em;
+  }
+}
+
+.header nav ul li a.active,
+.header nav ul li a:hover {
+  color: var(--sa-orange);
+}
+
+.authenticate {
+  text-align: center;
+  margin-bottom: -1.5em;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 0;
+  }
+}
+
+.authenticate-form {
+  display: flex;
+  justify-content: center;
+}
+
+.authenticate-form input[type="password"],
+.authenticate-form input[type="text"] {
+  height: 28px;
+  padding: 0 9px;
+  border: 1px solid #e9e9e9;
+  border-radius: 2px;
+  outline: 0;
+  font-weight: 400;
+  font-size: 14px;
+  max-width: 135px;
+
+  @include breakpoint(mobile) {
+    font-size: 16px;
+    max-width: 120px;
+  }
+}
+
+.authenticate-form input[type="submit"] {
+  display: block;
+  background: 0 0;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-left: 0.5em;
+}
+
+.authenticate .authenticate-form input[type="submit"]:focus,
+.authenticate .authenticate-form input[type="submit"]:hover {
+  color: var(--sa-orange);
+}
+
+.authenticate-feedback {
+}
+
+.authenticate-feedback p#feedback {
+  display: block;
+  padding: 1px 0 0 10px;
+  float: left;
+  font-weight: 400;
+  font-size: 12px;
+  color: #f33;
+  line-height: 20px;
+}
+
+.authenticate .authenticate-feedback p#wachtwoord {
+  display: block;
+  float: right;
+  margin-bottom: 0;
+}
+
+.authenticate .authenticate-feedback p#wachtwoord a {
+  font-weight: 400;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777;
+  line-height: 20px;
+}
+
+.authenticate .authenticate-feedback p#wachtwoord a:hover {
+  color: var(--sa-black);
+}
+
+/*------------------------------------*\
+  #HERO
+\*------------------------------------*/
+
+.hero {
+  background-color: #0c0f1b;
+  padding: 2em 1em 1em;
+  color: #ffffff;
+  border-bottom: 1em solid #fff;
+  border-image-source: linear-gradient(to right, #0c0f1b 40%, #fff 75%);
+  border-image-slice: 1;
+
+  @include breakpoint(mobile) {
+    border-image-source: linear-gradient(to right, #0c0f1b 70%, #fff 90%);
+  }
+}
+
+.hero-title {
+  margin: 0;
+  text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 1.75rem;
+  }
+}
+
+.hero--big {
+  padding: 3em 1em;
+}
+
+.intro h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  max-width: 500px;
+  max-width: min-content;
+  line-height: 1.125em;
+  margin-bottom: 1.5rem;
+}
+
+.intro h2 {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero--home {
+  padding: 0 1em;
+
+  @include breakpoint(mobile) {
+    background-image: url("../images/intro-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-size: cover;
+  }
+
+  .wrapper {
+    @include breakpoint(phablet) {
+      background-image: url("../images/intro-bg.png");
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: -20px;
+      background-size: contain;
+    }
+
+    @include breakpoint(desktop) {
+      background-size: auto;
+    }
+  }
+
+  .intro {
+    padding: 2em 0 1em;
+
+    @include breakpoint(phablet) {
+      @include span(4 of 7 first);
+    }
+
+    p {
+      max-width: 410px;
+    }
+  }
+}
+
+.hero--workshops {
+  padding: 0 1em;
+  @include breakpoint(mobile) {
+    background-image: url("../images/workshops-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-size: cover;
+  }
+
+  .wrapper {
+    @include breakpoint(phablet) {
+      background-image: url("../images/workshops-bg.png");
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-size: contain;
+    }
+
+    @include breakpoint(desktop) {
+      background-size: auto;
+    }
+  }
+
+  .intro {
+    padding: 2em 0 1em;
+
+    @include breakpoint(phablet) {
+      @include span(4 of 7 first);
+    }
+
+    h1,
+    h2,
+    p {
+      max-width: 410px;
+    }
+  }
+}
+
+.hero--contact {
+  padding: 0 1em;
+
+  @include breakpoint(mobile) {
+    background-image: url("../images/contact-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+  }
+
+  .wrapper {
+    @include breakpoint(phablet) {
+      background-image: url("../images/contact-bg.png");
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-size: contain;
+    }
+
+    @include breakpoint(desktop) {
+      background-size: auto;
+    }
+  }
+
+  .intro {
+    padding: 2em 0 1em;
+
+    @include breakpoint(phablet) {
+      @include span(6 of 9 first);
+    }
+
+    @include breakpoint(tablet) {
+      @include span(6 of 11 first);
+    }
+
+    h1,
+    h2,
+    p {
+      max-width: 410px;
+    }
+  }
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 2em 1em;
+}
+
+.footer-menu {
+  margin-bottom: 1em;
+  @include breakpoint(phablet) {
+    @include span(3 of 5 first);
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 30px;
+
+    &:hover {
+      color: var(--sa-orange);
+    }
+  }
+}
+
+.hide-mobile {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.footer .contact-info {
+  font-size: 1.5em;
+  font-weight: bold;
+  @include breakpoint(phablet) {
+    @include span(3 of 5 first);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.footer #trust-pilot {
+  @include breakpoint(phablet) {
+    @include span(2 of 5 last);
+  }
+}
+
+#trust-pilot .tp-widget-wrapper {
+  @include breakpoint(mobile) {
+    margin-left: 0 !important;
+  }
+}
+
+.footer .navigatie p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--sa-black);
+}
+
+.footer .navigatie a:hover {
+  color: var(--sa-orange);
+}
+
+.telefoonnummer-localhost {
+  font-weight: bold;
+  color: var(--sa-orange);
+}
+
+.social {
+  margin: 0.5em 0;
+
+  @include breakpoint(phablet) {
+    display: inline;
+    margin: 0 0.5em;
+  }
+}
+
+.social-icon {
+  vertical-align: sub;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.footer #twitter {
+  display: inline-block;
+  background: url("../images/button-twitter.png") no-repeat;
+  margin: 0 5px;
+
+  &:hover {
+    background-position: 0 -24px;
+  }
+}
+
+.footer #facebook {
+  display: inline-block;
+  background: url("../images/button-facebook.png") no-repeat;
+
+  &:hover {
+    background-position: 0 -24px;
+  }
+}
+
+.footer .iamstudios {
+  @include breakpoint(phablet) {
+    @include span(3 of 5 first);
+  }
+}
+
+.footer .iamstudios p {
+  font-size: 10px;
+}
+
+.footer .iamstudios p a {
+  font-weight: 700;
+}
+
+/*------------------------------------*\
+  #CLEARFIX
+\*------------------------------------*/
+.clearfix:after,
+.clearfix:before {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/*------------------------------------*\
+  #CONTENT
+\*------------------------------------*/
+
+#content {
+  @include container(76em);
+  padding: 1em;
+}
+
+form p {
+  overflow: hidden;
+}
+
+form p label {
+  display: block;
+  float: left;
+  @include breakpoint(desktop) {
+    @include span(1 of 5);
+  }
+}
+
+#content #introductie {
+  margin: 0 0 40px;
+  overflow: hidden;
+}
+
+#content #introductie #media p {
+  margin: 0;
+  color: #fff;
+}
+
+#content #introductie #media img {
+  display: block;
+}
+
+#content #recent-nieuws {
+  padding: 0 0 20px;
+  @include breakpoint(tablet) {
+    @include span(3 of 8 first);
+  }
+}
+
+#content #recent-nieuws .open-dag {
+  margin-bottom: 15px;
+}
+
+#content #recent-nieuws article {
+  background: url("../images/recent-nieuw-schaduw.png") center bottom no-repeat;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+
+#content #recent-nieuws article h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--sa-orange);
+  margin-bottom: 10px;
+}
+
+#content #recent-nieuws article h1 a {
+  color: var(--sa-orange);
+  text-decoration: none;
+}
+
+#content #recent-nieuws article h1 a:hover,
+#content #recent-nieuws article p strong {
+  color: var(--sa-black);
+}
+
+#content #luisteren-reacties {
+  padding-bottom: 100px;
+  @include breakpoint(tablet) {
+    @include span(5 of 8 last);
+  }
+}
+
+#content #luisteren-reacties #luisteren {
+  background: #ededed;
+  margin: 0 0 30px;
+  padding: 12px;
+  border: 1px solid #cecece;
+  overflow: hidden;
+}
+
+#content #luisteren-reacties #luisteren h1 {
+  padding: 11px 0 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  color: #4d727d;
+
+  @include breakpoint(laptop) {
+    @include span(2 of 5 first);
+    text-align: right;
+  }
+}
+
+/*------------------------------------*\
+  #AUDIO PLAYER
+\*------------------------------------*/
+
+.audio {
+  padding: 2em 1em;
+}
+
+.audio--flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include breakpoint(tablet) {
+    justify-content: space-around;
+  }
+}
+
+.audio-player {
+  background: #000;
+  height: 80px;
+  border: 1px solid #fff;
+  border-radius: 1em;
+  min-width: 330px;
+
+  @include breakpoint(mobile) {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+.audio-player .audiojs {
+  background: 0;
+  width: 100% !important;
+  height: 80px !important;
+  border-radius: 1em;
+}
+
+.audio-player .audiojs .play-pause {
+  height: 78px !important;
+  padding: 0 !important;
+  border-right: 1px solid #555;
+  text-align: center;
+  @include span(2 of 12 no-gutters);
+}
+
+.audio-player .audiojs .play-pause p {
+  width: 46px;
+  height: 80px;
+}
+
+.audio-player .audiojs .play-pause p.play {
+  background: url("../images/audio-player-play.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.audio-player .audiojs .play-pause p.pause {
+  background: url("../images/audio-player-pause.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.audio-player .audiojs .play-pause p.loading {
+  background: url("../images/audio-player-spinner.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.audio-player .audiojs .play-pause p.stop {
+  background: url("../images/audio-player-stop.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.audio-player .audiojs .scrubber {
+  background: #ff9c00;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  @include span(5 of 12 no-gutters);
+  height: 10px;
+  margin: 35px 12px 10px;
+
+  @include breakpoint(mobile) {
+    @include span(4 of 12 no-gutters);
+  }
+}
+
+.audio-player .audiojs .scrubber .progress {
+  background: #f0e7d9;
+}
+
+.audio-player .audiojs .scrubber .loaded {
+  background: #b4863f;
+}
+
+.audio-player .audiojs .time {
+  height: 78px;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: none;
+  line-height: 80px;
+  color: #fff;
+  border-left: 1px solid #555;
+  @include span(4 of 12 last no-gutters);
+  @include breakpoint(mobile) {
+    @include span(5 of 12 no-gutters);
+  }
+}
+
+/*------------------------------------*\
+  #REVIEWS
+\*------------------------------------*/
+
+#content #luisteren-reacties #reacties-uitgelicht article {
+  background: #fff;
+  min-height: 133px;
+  height: auto;
+  margin-bottom: 25px;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    @include span(1 of 2 first);
+  }
+  @include breakpoint(laptop) {
+    @include span(12 of 12);
+  }
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article:nth-child(even) {
+  background: #fbfbfb;
+  @include breakpoint(tablet) {
+    @include span(1 of 2 last);
+  }
+  @include breakpoint(laptop) {
+    @include span(12 of 12);
+  }
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article .media {
+  @include breakpoint(tablet) {
+    @include span(1 of 3 first);
+  }
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article .media p {
+  background: #fff;
+  margin: 0;
+  padding: 4px;
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article .media img {
+  margin: 0;
+  padding: 0;
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article .tekst {
+  padding: 1em;
+  box-sizing: border-box;
+  @include breakpoint(desktop) {
+    @include span(2 of 3 last);
+  }
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article .tekst h1 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--sa-orange);
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article .tekst h1 a {
+  color: var(--sa-orange);
+  text-decoration: none;
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article .tekst h1 a:hover {
+  color: var(--sa-black);
+}
+
+#content #luisteren-reacties #reacties-uitgelicht article .tekst p {
+  margin: 0;
+}
+
+/*------------------------------------*\
+  #SPOTLIGHT
+\*------------------------------------*/
+
+.spotlight {
+  background-color: #efefef;
+  padding: 2em 1em;
+  border-bottom: 10px solid #fff;
+  border-image-source: linear-gradient(to right, #efefef 40%, #fff 75%);
+  border-image-slice: 1;
+}
+
+.spotlight--flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.video {
+  flex-grow: 1;
+
+  @media (max-width: 768px) {
+    margin-bottom: 2em;
+  }
+
+  @include breakpoint(tablet) {
+    @include span(3 of 5);
+    @include first;
+  }
+}
+
+.review {
+  @include breakpoint(tablet) {
+    @include span(2 of 5);
+    @include last;
+  }
+}
+
+.review-title {
+  a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      color: var(--sa-orange);
+    }
+  }
+}
+
+.review-body {
+}
+.review-author {
+  font-style: italic;
+  color: #777;
+}
+
+/*------------------------------------*\
+  #RECENT
+\*------------------------------------*/
+
+.recent {
+  padding: 2em 1em;
+}
+
+.recent--title {
+  a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      color: var(--sa-orange);
+    }
+  }
+}
+
+.recent-news {
+  @include breakpoint(mobile) {
+    margin-bottom: 2em;
+  }
+
+  @include breakpoint(phablet) {
+    @include span(1 of 2);
+    @include first;
+  }
+}
+.recent-blog {
+  @include breakpoint(phablet) {
+    @include span(1 of 2);
+    @include last;
+  }
+}
+
+/*------------------------------------*\
+  #WORKSHOPS
+\*------------------------------------*/
+
+.workshops {
+  padding: 2em 1em;
+}
+
+.workshops h3 {
+  font-size: 21px;
+  line-height: 20px;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+
+.workshops article {
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+  padding: 1em;
+  transition: background-color 0.5s ease;
+  box-sizing: border-box;
+
+  @include breakpoint(tablet) {
+    @include span(1 of 2 no-gutters);
+
+    &:nth-of-type(2n) {
+      @include last;
+    }
+
+    &:nth-of-type(2n + 1) {
+      @include first;
+      clear: both;
+    }
+  }
+}
+
+.workshops article:hover {
+  background: #f7f7f7;
+}
+
+.workshops article img.uitgelicht {
+  width: 100%;
+  max-width: 100%;
+}
+
+.workshop-date {
+  font-weight: 700;
+  font-size: 1.375em;
+}
+
+.workshop-price {
+  color: var(--sa-orange);
+  font-weight: 700;
+  font-size: 1.375em;
+}
+
+.workshops article hgroup {
+  display: block;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.workshops article hgroup h1 {
+  display: block;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--sa-orange);
+  max-width: 75%;
+}
+
+.workshops article hgroup h1 a {
+  color: var(--sa-black);
+  text-decoration: none;
+}
+
+.workshops article hgroup h1 a:hover {
+  color: var(--sa-black);
+}
+
+.workshops article hgroup h2 {
+  display: block;
+  margin-top: 9px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #231f20;
+  text-align: left;
+}
+
+.workshops article .inleiding {
+  min-height: 7em;
+  text-align: left;
+}
+
+.workshops article .meer-informatie {
+  margin: 0;
+  padding-left: 330px;
+}
+
+.workshops article .aanmelden {
+  margin-bottom: 10px;
+  float: right;
+}
+
+.workshops article .aanmelden a {
+  text-decoration: none;
+}
+
+.workshops article .datum {
+  font-size: 20px;
+  line-height: 55px;
+  text-align: left;
+  color: var(--sa-orange);
+}
+
+.workshops article .datum strong {
+  font-weight: 900;
+  color: var(--sa-black);
+}
+
+.workshops article .datum .btw {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+}
+
+.extra-workshops {
+  padding: 2em 1em;
+}
+
+.extra-workshops h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.extra-workshops .uitgelicht {
+  max-width: 100%;
+}
+
+.extra-workshops h3 {
+  font-size: 21px;
+  line-height: 20px;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+
+.extra-workshops article {
+  text-align: center;
+  margin-bottom: 2em;
+  position: relative;
+  transition: background-color 0.5s ease;
+
+  @media (min-width: 37.5em) and (max-width: 50em) {
+    @include span(1 of 2);
+
+    &:nth-of-type(2n + 1) {
+      @include first;
+      clear: both;
+    }
+    &:nth-of-type(2n + 2) {
+      @include last;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    @include span(1 of 3);
+
+    &:nth-of-type(3n + 1) {
+      @include first;
+      clear: both;
+    }
+    &:nth-of-type(3n + 3) {
+      @include last;
+    }
+  }
+}
+
+.extra-workshops article:hover {
+  background: #f7f7f7;
+}
+
+.extra-workshops article h3 a {
+  color: var(--sa-black);
+  text-decoration: none;
+}
+
+.extra-workshops article h1 a:hover {
+  color: var(--sa-black);
+}
+
+.extra-workshops article .meer-informatie {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+/*------------------------------------*\
+  #WORKSHOP
+\*------------------------------------*/
+
+.workshop,
+.kennismakingsworkshop {
+  padding: 2em 1em;
+}
+
+#content #inhoudsopgave {
+  width: 300px;
+  padding: 20px 0 0;
+  float: right;
+}
+
+#content #inhoudsopgave h1 {
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 30px;
+  color: var(--sa-orange);
+}
+
+#content #inhoudsopgave h2 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+
+#content #inhoudsopgave ul {
+  margin: 0 0 20px;
+  padding: 0 0 0 20px;
+}
+
+#content #inhoudsopgave ul li {
+  font-size: 14px;
+  line-height: 20px;
+  color: #777;
+}
+
+#content #inhoudsopgave ul li a {
+  color: #777;
+}
+
+#content #inhoudsopgave ul li a:hover {
+  color: var(--sa-orange);
+}
+
+.kennismakingsworkshop-content,
+.workshop-content {
+  @include breakpoint(phablet) {
+    @include span(4 of 7 first);
+  }
+  @include breakpoint(tablet) {
+    @include span(2 of 3 first);
+  }
+}
+
+.kennismakingsworkshop-content #media,
+.workshop-content #media {
+  padding-bottom: 20px;
+}
+
+.kennismakingsworkshop-content #media p,
+.workshop-content #media p {
+  margin: 0;
+}
+
+.kennismakingsworkshop-content #media img,
+.workshop-content #media img {
+  display: block;
+}
+
+.kennismakingsworkshop h3,
+.workshop h3 {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+  color: #231f20;
+}
+
+.kennismakingsworkshop ol,
+.kennismakingsworkshop ul,
+.workshop ol,
+.workshop ul {
+  padding: 0 0 0 20px;
+}
+
+.workshop-sidebar {
+  @include breakpoint(phablet) {
+    margin-top: 3em;
+    @include span(3 of 7 last);
+  }
+  @include breakpoint(tablet) {
+    @include span(1 of 3 last);
+  }
+}
+
+.kennismakingsworkshop-details,
+.workshop-details {
+  padding: 1em;
+  border: 1px solid #e9e9e9;
+  background-color: #f8f8f8;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+}
+
+.workshop-data {
+  margin-bottom: 2em;
+  background-color: #009dc6;
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 1em;
+  border: 1px solid #0084ad;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.workshop-media {
+  margin: -1em -1em 1em;
+}
+
+.kennismakingsworkshop-details p,
+.workshop-details p {
+  margin-bottom: 15px;
+}
+
+.kennismakingsworkshop-details p.type,
+.workshop-details p.type {
+  font-size: 20px;
+  line-height: 26px;
+  color: #231f20;
+  margin: 5px 0 10px;
+}
+
+.kennismakingsworkshop-details p.datum,
+.workshop-details p.datum {
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--sa-orange);
+  margin: 5px 0 0;
+}
+
+.kennismakingsworkshop-details p.kosten,
+.workshop-details p.kosten {
+  font-size: 20px;
+  line-height: 26px;
+  color: #231f20;
+  margin: 0 0 20px;
+}
+
+.kennismakingsworkshop-details p.kosten_intake_stemtest,
+.workshop-details p.kosten_intake_stemtest {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 26px;
+  color: #231f20;
+  margin: -20px 0 20px;
+}
+
+.kennismakingsworkshop-details p .btw,
+.workshop-details p .btw {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+}
+
+.kennismakingsworkshop-details p.aanmelden,
+.workshop-details p.aanmelden {
+  margin-bottom: 0;
+}
+
+.kennismakingsworkshop-details p.intake_stemtest,
+.workshop-details p.intake_stemtest {
+  margin-bottom: 25px;
+}
+
+.kennismakingsworkshop-details p.intake_stemtest a,
+.workshop-details p.intake_stemtest a {
+  display: block;
+  background: url("../images/button-stemtest.png") no-repeat;
+  width: 156px;
+  height: 32px;
+  padding: 0 6px 0 0;
+  font-family: Ruda, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+}
+
+.kennismakingsworkshop-details p.intake_stemtest a:hover,
+.workshop-details p.intake_stemtest a:hover {
+  background-position: 0 -32px;
+}
+
+.kennismakingsworkshop-details p strong,
+.workshop-details p strong {
+  font-weight: 900;
+  color: var(--sa-black);
+}
+
+.kennismakingsworkshop-data p,
+.workshop-data p {
+  margin: 0 0 5px;
+}
+
+.kennismakingsworkshop-data table,
+.workshop-data table {
+  margin: 0 0 15px;
+}
+
+.kennismakingsworkshop-data table tr td,
+.workshop-data table tr td {
+  line-height: 30px;
+}
+
+.kennismakingsworkshop-data table tr td.les,
+.workshop-data table tr td.les {
+  padding: 0 0.25em;
+  color: #fff;
+  font-weight: 700;
+}
+
+.kennismakingsworkshop-data table tr td.locatie,
+.workshop-data table tr td.locatie {
+  color: #fff;
+  padding: 0 0.25em;
+}
+
+#content #sidebar #overzicht {
+  margin: 20px 0 0;
+}
+
+#content #sidebar #overzicht h1 {
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 30px;
+  color: var(--sa-orange);
+  margin-bottom: 10px;
+}
+
+#content #sidebar #overzicht h2 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #231f20;
+  margin-bottom: 20px;
+}
+
+#content #sidebar #overzicht ul {
+  margin: 0 0 20px;
+  padding: 0 0 0 20px;
+}
+
+#content #sidebar #overzicht ul li {
+  font-size: 14px;
+  line-height: 20px;
+  color: #777;
+}
+
+#content #sidebar #overzicht ul li a {
+  color: #777;
+}
+
+#content #sidebar #overzicht ul li a:hover {
+  color: var(--sa-orange);
+}
+
+/*------------------------------------*\
+  #AANMELDEN
+\*------------------------------------*/
+
+#aanmelden {
+  padding: 2em 1em;
+}
+
+#aanmelden #stappen ol {
+  display: block;
+  background: #fafafa;
+  margin: 0 0 40px;
+  padding: 0 0 0 20px;
+  border: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+
+#aanmelden #stappen ol li {
+  display: block;
+  background: url("../images/aanmelden-pijl.gif") left center no-repeat;
+  margin: 0 70px 0 0;
+  padding: 0 0 0 30px;
+  list-style: none;
+  color: #9a9a9a;
+  line-height: 48px;
+
+  @include breakpoint(phablet) {
+    margin: 0 25px 0 0;
+    float: left;
+  }
+  @include breakpoint(tablet) {
+    margin: 0 40px 0 0;
+    float: left;
+  }
+  @include breakpoint(laptop) {
+    height: 48px;
+    float: left;
+  }
+}
+
+#aanmelden #stappen ol li a {
+  font-weight: 400;
+  color: #231f20;
+}
+
+#aanmelden #stappen ol li a:hover {
+  color: var(--sa-orange);
+}
+
+#aanmelden #stappen ol li:first-child {
+  background: 0 0;
+  padding: 0;
+}
+
+#aanmelden #stappen ol li.active {
+  font-weight: 900;
+  color: #231f20;
+}
+
+#content #uitleg p {
+}
+
+#content #formulier_vraag {
+  @include breakpoint(laptop) {
+    padding: 0 0 10px 160px;
+  }
+}
+
+#content #formulier_lang h3 {
+  @include breakpoint(laptop) {
+    padding-left: 160px;
+  }
+}
+
+#content #formulier_lang .startdatum {
+  display: block;
+  line-height: 25px;
+  float: left;
+}
+
+#content #formulier_kort,
+#content #formulier_lang.onzichtbaar {
+  display: none;
+}
+
+#content #formulier_kort h3 {
+  @include breakpoint(laptop) {
+    padding-left: 160px;
+  }
+}
+
+#content #formulier_kort .startdatum {
+  display: block;
+  line-height: 25px;
+  float: left;
+}
+
+#content #formulier_kort.zichtbaar {
+  display: block;
+}
+
+#aanmelden h1 {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: var(--sa-orange);
+  margin-bottom: 20px;
+}
+
+#aanmelden h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--sa-orange);
+}
+
+#aanmelden h3 {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+  color: #231f20;
+}
+
+#aanmelden table {
+  margin: 0 0 20px;
+}
+
+#aanmelden form p {
+  margin: 0 0 5px;
+  overflow: hidden;
+}
+
+#aanmelden form p label {
+  display: block;
+  width: 160px;
+  line-height: 25px;
+  float: left;
+}
+
+#aanmelden form p input[type="password"],
+#aanmelden form p input[type="text"] {
+  display: block;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid #e2e2e2;
+  outline: 0;
+  float: left;
+  font-family: Ruda, sans-serif;
+  font-size: 14px;
+  color: #777;
+
+  @include breakpoint(laptop) {
+    width: 478px;
+    height: 23px;
+  }
+}
+
+#aanmelden form p input[type="text"]#aanmelden_geboortedatum_maand,
+#aanmelden form p input[type="text"]#aanmelden_geboortedatum_dag {
+  width: 36px;
+  padding: 0;
+  margin-right: 5px;
+  text-align: center;
+}
+
+#aanmelden form p input[type="text"]#aanmelden_geboortedatum_jaar {
+  width: 50px;
+  padding: 0;
+  text-align: center;
+}
+
+#aanmelden form p #geslacht_container {
+  display: block;
+  width: 138px;
+  height: 25px;
+  float: left;
+}
+
+#content p.akkoord_container {
+  line-height: 25px;
+  overflow: hidden;
+  @include breakpoint(laptop) {
+    padding: 10px 0 0 160px;
+  }
+}
+
+#content p.akkoord_container .akkoord {
+  display: block;
+  float: left;
+}
+
+#content p.akkoord_container a {
+  color: #777;
+  text-decoration: underline;
+}
+
+#content p.akkoord_container a:hover {
+  color: var(--sa-orange);
+}
+
+form p .feedback {
+  display: block;
+  margin: 0 0 0 10px;
+  color: #f33;
+  line-height: 25px;
+  @include breakpoint(mobile) {
+    clear: both;
+  }
+  @include breakpoint(tablet) {
+    float: left;
+  }
+}
+
+#aanmelden form p input[type="submit"] {
+  display: block;
+  background: var(--sa-orange);
+  margin: 0 0.25em 0 0;
+  font-size: 1.5em;
+  padding: 1em 1.5em;
+  border-radius: 0.5em;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+}
+
+#aanmelden #producten {
+  padding: 10px 0 40px;
+}
+
+#aanmelden #producten article h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--sa-orange);
+}
+
+#aanmelden #producten article p {
+  margin-bottom: 25px;
+}
+
+#aanmelden #producten article .media {
+  border: 1px solid #d9d9d9;
+  @include breakpoint(tablet) {
+    @include span(3 of 12 last);
+  }
+}
+
+#aanmelden #producten article .tekst {
+  @include breakpoint(tablet) {
+    @include span(8 of 12 first);
+  }
+}
+
+#aanmelden #producten article .prijs {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 30px;
+  text-align: right;
+  color: #231f20;
+  padding: 0 250px 0 0;
+  float: right;
+}
+
+#aanmelden #producten article .bestellen {
+  font-size: 20px;
+  line-height: 30px;
+  color: #231f20;
+  float: left;
+}
+
+#aanmelden #afleveradres p strong {
+  display: block;
+  font-weight: 900;
+  color: #231f20;
+  padding-bottom: 20px;
+}
+
+#aanmelden #gegevens {
+  width: 660px;
+}
+
+#aanmelden #gegevens table tr td,
+#aanmelden #gegevens table tr th {
+  line-height: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+#aanmelden #gegevens table tr th {
+  width: 160px;
+  font-weight: 400;
+  text-align: left;
+  color: #231f20;
+}
+
+#aanmelden #gegevens table tr:first-child td,
+#aanmelden #gegevens table tr:first-child th {
+  border-top: 1px solid #eee;
+}
+
+#aanmelden #bestelling {
+  width: 660px;
+}
+
+#aanmelden #bestelling table tr td {
+  background: url("../images/bestelling-check.gif") no-repeat;
+  font-size: 22px;
+  line-height: 40px;
+  color: var(--sa-orange);
+  padding-left: 30px;
+  border-top: 1px solid #eee;
+}
+
+#aanmelden #bestelling table tr td.prijs {
+  background: 0 0;
+  text-align: right;
+}
+
+#aanmelden #bestelling table tr td.prijs .btw {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+}
+
+#aanmelden #bestelling table tr.totaal td {
+  background: 0 0;
+  font-weight: 900;
+  color: #231f20;
+  padding: 0;
+}
+
+.over-ons {
+  padding: 2em 1em;
+
+  .intro {
+    @include breakpoint(phablet) {
+      @include span(4 of 7 first);
+    }
+
+    p {
+      max-width: 410px;
+    }
+  }
+
+  .media {
+    @include breakpoint(phablet) {
+      @include span(3 of 7 last);
+    }
+  }
+}
+
+/*------------------------------------*\
+  #OVER ONS
+\*------------------------------------*/
+
+.over-localhost {
+  padding: 2em 1em;
+}
+
+.over-localhost-content {
+  @include breakpoint(phablet) {
+    @include span(4 of 7 first);
+  }
+  @include breakpoint(tablet) {
+    @include span(2 of 3 first);
+  }
+}
+
+.over-localhost-sidebar {
+  @include breakpoint(phablet) {
+    margin-top: 3em;
+    @include span(3 of 7 last);
+  }
+  @include breakpoint(tablet) {
+    @include span(1 of 3 last);
+  }
+}
+
+#docenten {
+  padding: 2em 1em;
+}
+
+#docenten #namen ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+
+  @include breakpoint(phablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(laptop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+#docenten #namen ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#docenten #namen ul li a {
+  display: block;
+  padding: 1em 0.5em 1em 0;
+  text-align: left;
+  text-decoration: none;
+  color: #787878;
+}
+
+#docenten #namen ul li a.active,
+#docenten #namen ul li a:hover {
+  color: var(--sa-orange);
+}
+
+#docenten #biografieen {
+  padding: 1em;
+  border: 1px solid #e9e9e9;
+  background-color: #f8f8f8;
+  border-radius: 0.5em;
+  margin-bottom: 3em;
+}
+
+#docenten #biografieen article {
+  overflow-y: hidden;
+}
+
+.docenten-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.docent {
+  font-weight: 700;
+  line-height: 1.125em;
+  color: var(--sa-orange);
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+.docent-media {
+  float: right;
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+#docenten #biografieen article p:last-child {
+  margin-bottom: 0;
+}
+
+#docenten #biografieen article h1 {
+  font-weight: 400;
+  line-height: 1.125em;
+  color: var(--sa-orange);
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+/*------------------------------------*\
+  #CONTACT
+\*------------------------------------*/
+
+.contact {
+  padding: 2em 1em;
+}
+
+.hero-grid {
+  @include breakpoint(phablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.grid-item {
+  padding-right: 1em;
+  margin-bottom: 2em;
+}
+
+.grid-item-telephone {
+  @include breakpoint(phablet) {
+    grid-column: 1 / span 2;
+  }
+
+  @include breakpoint(tablet) {
+    grid-column: 2 / span 2;
+  }
+}
+
+.location-title {
+  display: block;
+  color: var(--sa-orange);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.subheading {
+  display: block;
+  color: #cccccc;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.telephone {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.25em;
+
+  @include breakpoint(tablet) {
+    font-size: 3em;
+  }
+}
+
+#content #contactgegevens {
+  margin: 0 0 40px;
+  overflow: hidden;
+}
+
+#content #contactgegevens #tekst {
+  @include breakpoint(tablet) {
+    @include span(3 of 7 first);
+  }
+  @include breakpoint(desktop) {
+    @include span(3 of 8 first);
+  }
+}
+
+#content #contactgegevens #tekst hgroup h1 {
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 48px;
+  color: var(--sa-orange);
+}
+
+#content #contactgegevens #tekst hgroup h2 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--sa-black);
+  margin-bottom: 20px;
+}
+
+#content #contactgegevens #tekst p {
+  margin: 0;
+}
+
+#content #contactgegevens #tekst #adres {
+  margin-bottom: 20px;
+}
+
+#content #contactgegevens #tekst #btw {
+  margin-bottom: 10px;
+}
+
+#content #contactgegevens #tekst #btw span {
+  display: inline-block;
+  width: 50px;
+}
+
+#content #contactgegevens #tekst #bel {
+  background: url("../images/bel-schaduw.png");
+  width: 300px;
+  height: 90px;
+  padding: 30px 0 0;
+  font-size: 28px;
+  line-height: 90px;
+  color: var(--sa-orange);
+}
+
+#content #contactgegevens #media {
+  @include breakpoint(tablet) {
+    @include span(4 of 7 last);
+  }
+  @include breakpoint(desktop) {
+    @include span(5 of 8 last);
+  }
+}
+
+#content #contactgegevens #media p {
+  margin: 0;
+}
+
+#content #contactgegevens #media img {
+  display: block;
+}
+
+#vragen_contact {
+  overflow: hidden;
+}
+
+#vragen_contact #meest-gestelde-vragen {
+  margin-bottom: 2em;
+  @include breakpoint(tablet) {
+    @include span(3 of 7 first);
+  }
+  @include breakpoint(desktop) {
+    @include span(4 of 8 first);
+  }
+}
+
+#meest-gestelde-vragen ul {
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+#meest-gestelde-vragen ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#meest-gestelde-vragen ul li a {
+  line-height: 30px;
+  color: #231f20;
+}
+
+#meest-gestelde-vragen ul li a:hover {
+  color: var(--sa-orange);
+}
+
+#meest-gestelde-vragen p a.meer {
+  display: block;
+  margin: 25px 0 35px;
+}
+
+#contactformulier {
+  margin-bottom: 2em;
+  @include breakpoint(tablet) {
+    @include span(4 of 7 last);
+  }
+  @include breakpoint(desktop) {
+    @include span(4 of 8 last);
+  }
+}
+
+#contactformulier .form-group {
+  margin-bottom: 0.5em;
+}
+
+#contactformulier label {
+  width: 30%;
+  display: inline-block;
+  font-weight: 700;
+  vertical-align: top;
+  min-width: 140px;
+  padding-top: 0.25em;
+}
+
+#contactformulier input[type="text"],
+#contactformulier textarea {
+  width: 65%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-radius: 0.25em;
+}
+
+#contactformulier p.feedback {
+  padding: 0 0 10px 200px;
+  color: #f33;
+}
+
+#contactformulier p.verzonden {
+  padding: 0 0 10px 200px;
+}
+
+#vragen ol {
+  margin: 0 0 50px;
+  padding: 0;
+}
+
+#vragen ol li {
+  font-weight: 900;
+  color: #231f20;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+#vragen ol li a {
+  color: #231f20;
+}
+
+#vragen ol li a:hover {
+  color: var(--sa-orange);
+}
+
+#vragen article {
+  background: url("../images/overons-schaduw.png") left bottom no-repeat;
+  padding: 0 0 15px;
+  overflow: hidden;
+}
+
+#vragen article .media {
+  padding: 40px 0 0;
+  float: right;
+}
+
+#vragen article .vraag_antwoord {
+  margin-bottom: 2em;
+  @include breakpoint(laptop) {
+    @include span(9 of 12 first);
+  }
+}
+
+#vragen article .vraag_antwoord h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 15px;
+  padding-top: 35px;
+}
+
+#vragen .contact {
+  display: block;
+  margin: 50px 0 130px;
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: var(--sa-orange);
+}
+
+#vragen .contact a {
+  text-decoration: underline;
+}
+
+.newsletter {
+}
+
+/*------------------------------------*\
+  #BLOG
+\*------------------------------------*/
+.blog {
+  padding: 2em 1em;
+}
+
+.blogpost {
+  padding: 2em 1em;
+}
+
+.blogpost-content {
+  @include breakpoint(phablet) {
+    @include span(4 of 7 first);
+  }
+  @include breakpoint(tablet) {
+    @include span(2 of 3 first);
+  }
+}
+
+.blogpost-sidebar {
+  padding: 1em;
+  border: 1px solid #e9e9e9;
+  background-color: #f8f8f8;
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+
+  @include breakpoint(phablet) {
+    margin-top: 3em;
+    @include span(3 of 7 last);
+  }
+  @include breakpoint(tablet) {
+    @include span(1 of 3 last);
+  }
+}
+
+.blog article {
+  padding: 1em;
+  transition: background-color 0.5s ease;
+  padding: 1em;
+  clear: both;
+  overflow: auto;
+  border-radius: 0.5em;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+
+  &.uitgelicht {
+    border: 1px solid;
+    border-color: var(--sa-orange);
+    margin-bottom: 2em;
+  }
+
+  &:hover {
+    background: #f7f7f7;
+  }
+}
+
+.blog article h1 {
+  font-weight: 400;
+  color: var(--sa-orange);
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.blog article h1 a {
+  text-decoration: none;
+  color: var(--sa-orange);
+}
+
+.blog article h1 a:hover {
+  color: var(--sa-black);
+}
+
+.blog article .media {
+  @include breakpoint(tablet) {
+    @include span(3 of 12 first);
+  }
+}
+
+.blog article .media p {
+  margin: 0;
+}
+
+.blog article .tekst {
+  @include breakpoint(tablet) {
+    @include span(9 of 12 last);
+  }
+}
+
+.blog article .tekst h1 {
+  margin-bottom: 15px;
+}
+
+.blog article .tekst p {
+  margin: 0;
+}
+
+#content #paginanummering {
+  font-size: 16px;
+  color: var(--sa-orange);
+}
+
+#content #paginanummering a {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+#content #paginanummering a.active,
+#content #paginanummering a:hover {
+  color: #231f20;
+}
+
+#content #reactie {
+  overflow: hidden;
+}
+
+#content #reactie #media {
+  padding-top: 70px;
+  float: right;
+}
+
+#content #reactie #tekst {
+}
+
+#content #reactie #tekst h1 {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: var(--sa-orange);
+  margin-bottom: 25px;
+}
+
+#content #reactie #tekst h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--sa-orange);
+  margin-bottom: 20px;
+}
+
+/*------------------------------------*\
+  #NIEUWS
+\*------------------------------------*/
+.nieuws {
+  padding: 2em 1em;
+}
+
+.nieuws h1 {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: var(--sa-orange);
+  margin-bottom: 25px;
+}
+
+.nieuws article {
+  background: url("../images/overons-schaduw.png") left bottom no-repeat;
+  margin: 0 0 35px;
+  padding: 0 0 35px;
+  overflow: hidden;
+}
+
+.nieuws article h1 {
+  display: block;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--sa-orange);
+  margin-bottom: 20px;
+}
+
+.nieuws article h1 a {
+  text-decoration: none;
+  color: var(--sa-orange);
+}
+
+.nieuws article h1 a:hover {
+  color: var(--sa-black);
+}
+
+.nieuws article .media {
+  @include breakpoint(tablet) {
+    @include span(3 of 12 first);
+  }
+}
+
+.nieuws article .media p {
+  margin: 0;
+}
+
+.nieuws article .media img {
+  display: block;
+  max-width: 100%;
+}
+
+.nieuws article .tekst {
+  padding-bottom: 25px;
+
+  @include breakpoint(tablet) {
+    @include span(9 of 12 last);
+  }
+}
+
+.nieuws article p {
+  margin: 0;
+}
+
+.nieuws article p strong {
+  color: var(--sa-black);
+}
+
+/*------------------------------------*\
+  #STANDARD PAGE
+\*------------------------------------*/
+.page {
+  padding: 2em 1em;
+}
+
+/*------------------------------------*\
+  #REACTIES
+\*------------------------------------*/
+
+.reactie,
+.reacties {
+  padding: 2em 1em;
+}
+
+.reacties article {
+  background: url("../images/overons-schaduw.png") left bottom no-repeat;
+  margin: 0 0 35px;
+  padding: 0 0 35px;
+  overflow: hidden;
+}
+
+.reacties article h1 {
+  display: block;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--sa-orange);
+  margin-bottom: 20px;
+}
+
+.reacties article h1 a {
+  text-decoration: none;
+  color: var(--sa-orange);
+}
+
+.reacties article h1 a:hover {
+  color: var(--sa-black);
+}
+
+.reacties article .media {
+  @include breakpoint(tablet) {
+    @include span(3 of 12 first);
+  }
+}
+
+.reacties article .media p {
+  margin: 0;
+}
+
+.reacties article .media img {
+  display: block;
+  max-width: 100%;
+}
+
+.reacties article .tekst {
+  @include breakpoint(tablet) {
+    @include span(9 of 12 last);
+  }
+}
+
+.reacties article p {
+  margin: 0;
+}
+
+.reacties article p strong {
+  color: var(--sa-black);
+}
+
+#share {
+  display: inline-flex;
+  padding: 0.5em 1em 0;
+  border: 1px solid #ddd;
+  background: #efefef;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#share > div {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#share > div.twitter {
+  height: 20px;
+}
+
+#content #share p {
+  margin: 0 0 10px;
+}
+
+#content #bericht {
+  margin: 5px 0 60px;
+}
+
+#content #bericht h1 {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 40px;
+  color: var(--sa-orange);
+  margin-bottom: 25px;
+}
+
+#content #bericht h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--sa-orange);
+  margin-bottom: 20px;
+}
+
+#content #bericht p strong {
+  color: var(--sa-black);
+}
+
+#content #bericht blockquote {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 16px;
+  color: var(--sa-orange);
+}
+
+#content #bericht #nav_vorige_volgende {
+  padding: 20px 0 0;
+  overflow: hidden;
+}
+
+#content #bericht #nav_vorige_volgende p {
+  display: block;
+  float: left;
+  font-size: 16px;
+}
+
+#content #bericht #nav_vorige_volgende p#nav_volgende {
+  @include breakpoint(tablet) {
+    @include span(1 of 3 first);
+  }
+}
+
+#content #bericht #nav_vorige_volgende p#nav_volgende span {
+  width: 15px;
+  float: left;
+}
+
+#content #bericht #nav_vorige_volgende p#nav_volgende a {
+  display: block;
+  float: left;
+}
+
+#content #bericht #nav_vorige_volgende p#nav_volgende:hover a,
+#content #bericht #nav_vorige_volgende p#nav_volgende:hover span {
+  color: #231f20;
+}
+
+#content #bericht #nav_vorige_volgende p#nav_overzicht {
+  text-align: center;
+  @include breakpoint(tablet) {
+    @include span(1 of 3);
+  }
+}
+
+#content #bericht #nav_vorige_volgende p#nav_vorige {
+  @include breakpoint(tablet) {
+    @include span(1 of 3 last);
+  }
+}
+
+#content #bericht #nav_vorige_volgende p#nav_vorige span {
+  width: 15px;
+  float: right;
+}
+
+#content #bericht #nav_vorige_volgende p#nav_vorige a {
+  display: block;
+  width: 175px;
+  float: right;
+}
+
+#content #bericht #nav_vorige_volgende p#nav_vorige:hover a,
+#content #bericht #nav_vorige_volgende p#nav_vorige:hover span {
+  color: #231f20;
+}
+
+#content #tekstpagina {
+  width: 620px;
+}
+
+#content #tekstpagina hgroup h1 {
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 48px;
+  color: var(--sa-orange);
+}
+
+#content #tekstpagina hgroup h2 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--sa-black);
+  margin-bottom: 20px;
+}
+
+/*------------------------------------*\
+  #MISCELLANEAOUS
+\*------------------------------------*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  header h1 a {
+    background: url("../images/logo-localhost@2x.png") no-repeat;
+    background-size: 330px 70px;
+  }
+}
+
+ul li a {
+  color: var(--sa-orange);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul li a:hover {
+  color: #231f20;
+}
+
+#mc-embedded-subscribe-form {
+  padding: 0 !important;
+}
+
+#verhinderd {
+  display: none;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accoordion.active:after {
+  content: "\2212";
+}
+
+.accordion.active,
+.accordion:hover {
+  background-color: #059ec5;
+}
+
+.panel {
+  padding: 0 20px 0 20px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+  margin: 0 0 25px 0;
+  box-shadow: 0px 0px 30px -2px rgba(148, 148, 148, 1);
+}
+
+.panel_titel {
+  padding: 20px 0 0 20px;
+}
+
+.panel_tekst {
+  width: 50%;
+  float: left;
+  margin: 30px 0 30px 30px;
+}
+
+.youtube_video {
+  float: right;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 1078px) {
+  .youtube_video {
+    float: none;
+  }
+
+  .panel_tekst {
+    float: none;
+    width: auto;
+  }
+}
+
+#tab {
+  list-style: none;
+  cursor: pointer;
+  -webkit-padding-start: 0px;
+  padding: 0px !important;
+}
+
+#tab label {
+  border-radius: 0.5em;
+  position: relative;
+  padding: 1em 2em;
+  cursor: pointer;
+  background-color: var(--sa-orange);
+}
+
+#tab li div.content {
+  display: none;
+}
+
+#tab li.active div.content {
+  display: inherit;
+}
+
+#tab > li.active > label > span.arrow {
+  transform: rotate(90deg);
+}
+
+label .arrow {
+  border: 8px solid transparent;
+  border-width: 8px 10px;
+  border-left-color: black;
+  margin-left: 1.5em;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  text-align: center;
+  content: "";
+  color: #aaafab;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+  vertical-align: sub;
+  transform: rotate(0deg);
+}
+
+.iamstudios .privacy_link a {
+  color: gray;
+  text-decoration-color: gray;
+  text-decoration: none;
+}
+
+.cookie-banner .left-column {
+  float: left;
+  margin: 0px 30px 26px 10px;
+}
+
+.cookie-banner {
+  background-color: #f5f5f5;
+}
+
+.cookie-banner div.container {
+  padding: 50px;
+}
+
+.cookie-banner div.container a {
+  text-decoration: none;
+}
+
+.cookie-banner div.container a.button {
+  margin: 0px 100px;
+}
+
+form #website {
+  display: none;
+}

@@ -1,0 +1,68 @@
+
+$blauw: #009DC6;
+$zwart: #231F20;
+$grijs: #777777;
+$rood: #F33;
+
+h1, h2, h3, h4, h5, h6, p
+{
+	font-family: 'Ruda', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #777;
+	
+	margin: 0 0 10px 0;
+}
+
+h1
+{
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 32px;
+	color: $blauw;
+	
+	a
+	{
+		color: $blauw;
+		text-decoration: none;
+		
+		&:hover
+		{
+			color: #000;
+		}
+	}
+}
+
+h2
+{
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 20px;
+	color: $zwart;
+}
+
+h3
+{
+	font-size: 14px;
+	font-weight: 900;
+	line-height: 20px;
+	color: $zwart;
+}
+
+p
+{
+}
+
+ol, ul
+{
+	margin: 0 0 20px 0;
+	padding: 0 0 0 20px;
+	
+	li
+	{
+		font-family: 'Ruda', sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		color: #777;
+	}
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `stem_workshops` ADD `workshop_grootte_zichtbaar` TINYINT NOT NULL DEFAULT '1' AFTER `volledige_cursistenmodule`;

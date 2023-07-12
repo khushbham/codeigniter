@@ -1,0 +1,1 @@
+ALTER TABLE `stem_producten` ADD `product_beschrijving_huur` TEXT NULL DEFAULT NULL AFTER `product_huur`;

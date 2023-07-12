@@ -1,0 +1,1 @@
+ALTER TABLE `stem_workshops` ADD `workshop_producten_tekst` TEXT NULL DEFAULT NULL AFTER `workshop_producten`;

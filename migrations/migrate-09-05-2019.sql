@@ -1,0 +1,1 @@
+ALTER TABLE `stem_gebruikers` CHANGE `gebruiker_rechten` `gebruiker_rechten` ENUM('admin','support','deelnemer','docent','demo','opleidingsmedewerker','kandidaat','test','contentmanager') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'deelnemer';

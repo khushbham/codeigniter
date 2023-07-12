@@ -1,0 +1,1 @@
+ALTER TABLE `stem_bestellingen_producten` ADD `verzonden` INT(1) NOT NULL DEFAULT '0' AFTER `product_ID`;

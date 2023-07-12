@@ -1,0 +1,1 @@
+INSERT INTO `stem_paginas` (`pagina_ID`, `pagina_titel`, `pagina_titel_menu`, `pagina_url`, `pagina_inleiding`, `pagina_tekst`, `media_ID`, `meta_gewenst`, `meta_title`, `meta_description`) VALUES ('15', 'Revue des Voix', 'Revue des Voix', 'revue-des-Voix', 'Revue des Voix', 'Revue des Voix', NULL, '1', NULL, NULL);

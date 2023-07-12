@@ -1,0 +1,7 @@
+{
+    "require": {
+        "paynl/sdk":"^1.5.17.0",
+        "maennchen/zipstream-php":"^2.1.0.0",
+        "tecnickcom/tcpdf": "^6.3"
+    }
+}

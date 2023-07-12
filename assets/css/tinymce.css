@@ -1,0 +1,61 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: Ruda, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #777;
+	margin: 0 0 10px
+}
+
+h1 {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 32px;
+	color: #009dc6
+}
+
+h1 a {
+	color: #009dc6;
+	text-decoration: none
+}
+
+h1 a:hover {
+	color: #000
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #231f20
+}
+
+h3 {
+	font-size: 14px;
+	font-weight: 900;
+	line-height: 20px;
+	color: #231f20
+}
+
+ol,
+ul {
+	margin: 0 0 20px;
+	padding: 0 0 0 20px
+}
+
+ol li,
+ul li {
+	font-family: Ruda, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #777
+}
+
+#content .formulier p .mce-tinymce {
+	width: auto!important;
+}

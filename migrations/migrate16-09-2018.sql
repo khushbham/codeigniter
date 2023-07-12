@@ -1,0 +1,2 @@
+ALTER TABLE `stem_workshops` ADD `workshop_annuleringsverzekering` INT(1) NOT NULL DEFAULT '0' AFTER `volledige_cursistenmodule`;
+ALTER TABLE `stem_workshops` ADD `workshop_annuleringsverzekering_percentage` INT NOT NULL AFTER `workshop_annuleringsverzekering`;

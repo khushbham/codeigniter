@@ -1,0 +1,1 @@
+INSERT INTO `stemacter`.`stem_beoordelingscriteria` (`beoordelingscriteria_ID`, `beoordelingscriteria_naam`) VALUES ('11', 'Tone of voice');

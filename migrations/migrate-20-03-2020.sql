@@ -1,0 +1,1 @@
+ALTER TABLE `stem_lessen` ADD `les_video_type` ENUM('vimeo_standaard','zoom','vimeo') NOT NULL AFTER `les_voorbereidingsmail`;

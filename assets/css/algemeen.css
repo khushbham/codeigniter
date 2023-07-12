@@ -1,0 +1,231 @@
+/* localhost - Algemeen */
+html, body {
+  background: #009DC6 url("../images/body-achtergrond-repeat.png") repeat-x;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Ruda", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: none;
+}
+
+#wrapper {
+  background-image: url("../images/content-achtergrond-repeat.png");
+  background-position: center top;
+  background-repeat: repeat-y;
+  width: 100%;
+  min-width: 1100px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+.wrapper {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.titel {
+  display: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+p a {
+  color: #009DC6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p a:hover {
+  color: #231F20;
+}
+
+a.button {
+  display: block;
+  background: url("../images/button-achtergrond.png") 0 0 no-repeat;
+  width: 280px;
+  height: 70px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #FFF;
+}
+
+a.button:hover {
+  background-position: 0 -75px;
+  color: #FFF;
+}
+
+a.button-smal {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 250px;
+  height: 70px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #FFF;
+}
+
+a.button-smal:hover {
+  background-position: 0 -75px;
+  color: #FFF;
+}
+
+a.meer {
+  font-size: 16px;
+}
+
+img {
+  border: 0;
+}
+
+/* Header */
+header {
+  background: url("../images/header-achtergrond.png") center top no-repeat;
+  width: 100%;
+  height: 150px;
+}
+
+/* Content */
+#content {
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0 0 155px 0;
+}
+
+#inhoud {
+  padding: 0 60px;
+}
+
+/* Footer */
+footer {
+  background: #F2F2F2;
+  width: 100%;
+  min-width: 1100px;
+  height: 155px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin-top: -156px;
+}
+footer .navigatie nav {
+  display: block;
+  margin: 30px 0 0 55px;
+  float: left;
+}
+footer .navigatie nav a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 7px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+}
+footer .navigatie nav a:hover {
+  color: #009DC6;
+}
+footer .navigatie p {
+  display: block;
+  margin: 30px 60px 0 0;
+  float: right;
+  line-height: 30px;
+}
+footer .navigatie p a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 7px;
+  color: #777;
+}
+footer .navigatie p a:hover {
+  color: #009DC6;
+}
+footer .navigatie p#sociale-media {
+  margin-right: 10px;
+  padding-top: 3px;
+  overflow: hidden;
+}
+footer .navigatie p#sociale-media a#twitter {
+  display: block;
+  background: url("../images/button-twitter.png") 0 0 no-repeat;
+  width: 24px;
+  height: 24px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  float: left;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+footer .navigatie p#sociale-media a#twitter:hover {
+  background-position: 0 -24px;
+}
+footer .navigatie p#sociale-media a#facebook {
+  display: block;
+  background: url("../images/button-facebook.png") 0 0 no-repeat;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+footer .navigatie p#sociale-media a#facebook:hover {
+  background-position: 0 -24px;
+}
+footer .iamstudios {
+  padding: 20px 60px 0 60px;
+}
+footer .iamstudios p {
+  font-size: 10px;
+  text-align: right;
+}
+footer .iamstudios p a {
+  font-weight: 700;
+}
+
+/* Clearfix */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix {
+  zoom: 1;
+}
+
+/* TinyMCE */
+.tox.tox-tinymce {
+  clear: both;
+}
+
+/*# sourceMappingURL=algemeen.css.map */

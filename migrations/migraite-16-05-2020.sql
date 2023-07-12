@@ -1,0 +1,1 @@
+ALTER TABLE `stem_uitnodigingen_links` ADD `uitnodiging_limiet` INT NULL AFTER `link_gebruikt`;

@@ -1,0 +1,1 @@
+ALTER TABLE `stem_gebruikers` ADD `gebruiker_uitgenodigd_vervolg` ENUM('nee','ja','','') NOT NULL DEFAULT 'nee' AFTER `gebruiker_profiel_foto`;

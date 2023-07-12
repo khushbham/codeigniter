@@ -1,0 +1,17 @@
+<h1>Demo account wijzigen</h1>
+<div id="toevoegen_wijzigen" class="formulier">
+    <form method="post" action="<?php if($actie == 'toevoegen') echo base_url('cms/gegevens/demo_wijzigen/'); else echo base_url('cms/gegevens/demo_wijzigen/'.$item_ID); ?>">
+        <p><label for="item_bedrijfsnaam">Bedrijfsnaam</label><input type="text" name="item_bedrijfsnaam" id="item_bedrijfsnaam" value="<?php echo $item_bedrijfsnaam ?>" /><span class="feedback"><?php echo $item_bedrijfsnaam_feedback ?></span></p>
+        <p><label for="item_voornaam">Voornaam *</label><input type="text" name="item_voornaam" id="item_voornaam" value="<?php echo $item_voornaam ?>" /><span class="feedback"><?php echo $item_voornaam_feedback ?></span></p>
+        <p><label for="item_tussenvoegsel">Tussenvoegsel</label><input type="text" name="item_tussenvoegsel" id="item_tussenvoegsel" value="<?php echo $item_tussenvoegsel ?>" /><span class="feedback"><?php echo $item_tussenvoegsel_feedback ?></span></p>
+        <p><label for="item_achternaam">Achternaam *</label><input type="text" name="item_achternaam" id="item_achternaam" value="<?php echo $item_achternaam ?>" /><span class="feedback"><?php echo $item_achternaam_feedback ?></span></p>
+        <p><label for="item_geboortedatum">Geboortedatum</label><input type="text" name="item_geboortedatum_dag" id="item_geboortedatum" value="<?php echo $item_geboortedatum_dag ?>" maxlength="2" class="datum_smal" /><input type="text" name="item_geboortedatum_maand" value="<?php echo $item_geboortedatum_maand ?>" maxlength="2" class="datum_smal" /><input type="text" name="item_geboortedatum_jaar" value="<?php echo $item_geboortedatum_jaar ?>" maxlength="4" class="datum_breed" /><span class="feedback"><?php echo $item_geboortedatum_feedback ?></span></p>
+        <p><label for="item_adres">Adres</label><input type="text" name="item_adres" id="item_adres" value="<?php echo $item_adres ?>" /><span class="feedback"><?php echo $item_adres_feedback ?></span></p>
+        <p><label for="item_postcode">Postcode</label><input type="text" name="item_postcode_cijfers" id="item_postcode" value="<?php echo $item_postcode_cijfers ?>" maxlength="4" class="postcode_breed" /><input type="text" name="item_postcode_letters" value="<?php echo $item_postcode_letters ?>" maxlength="2" class="postcode_smal" /><span class="feedback"><?php echo $item_postcode_feedback ?></span></p>
+        <p><label for="item_plaats">Plaats</label><input type="text" name="item_plaats" id="item_plaats" value="<?php echo $item_plaats ?>" /><span class="feedback"><?php echo $item_plaats_feedback ?></span></p>
+        <p><label for="item_telefoonnummer">Telefoonnummer</label><input type="text" name="item_telefoonnummer" id="item_telefoonnummer" value="<?php echo $item_telefoonnummer ?>" /><span class="feedback"><?php echo $item_telefoonnummer_feedback ?></span></p>
+        <p><label for="item_mobiel">Mobiel</label><input type="text" name="item_mobiel" id="item_mobiel" value="<?php echo $item_mobiel ?>" /><span class="feedback"><?php echo $item_mobiel_feedback ?></span></p>
+        <p><label for="item_emailadres">E-mailadres *</label><input type="text" name="item_emailadres" id="item_emailadres" value="<?php echo $item_emailadres ?>" /><span class="feedback"><?php echo $item_emailadres_feedback ?></span></p>
+        <p class="submit"><input type="submit" value="Deelnemer <?php echo $actie ?>" /> <a href="<?php echo base_url('cms/gegevens') ?>" title="Annuleren">Annuleren</a></p>
+    </form>
+</div>

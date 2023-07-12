@@ -1,0 +1,2 @@
+ALTER TABLE `stem_individuen_lessen` ADD `les_voorbereidingsmail_verstuurd` TINYINT NOT NULL DEFAULT 0 AFTER `workshop_ID`;
+ALTER TABLE `stem_groepen_lessen` ADD `les_voorbereidingsmail_verstuurd` TINYINT NOT NULL DEFAULT 0 AFTER `groep_les_plaats`;

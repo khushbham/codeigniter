@@ -1,0 +1,2 @@
+ALTER TABLE `stem_workshops` ADD `workshop_capayable` INT(1) NOT NULL DEFAULT '1' AFTER `workshop_archiveren`;
+ALTER TABLE `stem_kortingscodes` ADD `kortingscode_capayable` INT(1) NOT NULL DEFAULT '1' AFTER `kortingscode_limiet`;

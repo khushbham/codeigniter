@@ -1,0 +1,33 @@
+<h1>Deelnemer <?php echo $actie ?></h1>
+<div id="toevoegen_wijzigen" class="formulier">
+	<form method="post" <?php if($this->session->userdata('beheerder_rechten') != 'admin' && $this->session->userdata('beheerder_rechten') != 'support') { ?>onsubmit="return confirm('Weet je zeker dat je dit wilt doen?')"; <?php } ?> action="<?php if($actie == 'toevoegen') echo base_url('cms/deelnemers/toevoegen/'); else echo base_url('cms/deelnemers/wijzigen/'.$item_ID); ?>">
+		<p>
+			<label for="item_rechten">Rechten</label>
+			<select name="item_rechten" id="item_rechten">
+				<option value="kandidaat" <?php if($item_rechten == 'kandidaat') echo 'selected'; ?>>Kandidaat</option>
+				<option value="deelnemer" <?php if($item_rechten == 'deelnemer') echo 'selected'; ?>>Deelnemer</option>
+			</select>
+		</p>
+		<p><label for="item_status">Status *</label><input type="radio" name="item_status" value="concept" <?php if($item_status == 'concept') echo 'checked'; ?> /> Concept <input type="radio" name="item_status" value="actief" <?php if($item_status == 'actief') echo 'checked'; ?> /> Actief <input type="radio" name="item_status" value="inactief" <?php if($item_status == 'inactief') echo 'checked'; ?> /> Inactief<span class="feedback"><?php echo $item_status_feedback ?></span></p>
+		<p><label for="item_markering">Markering *</label><input type="radio" name="item_markering" value="ja" <?php if($item_markering == 'ja') echo 'checked'; ?> /> Ja <input type="radio" name="item_markering" value="actief" <?php if($item_markering == 'nee') echo 'checked'; ?> /> Nee <span class="feedback"><?php echo $item_markering_feedback ?></span></p>
+		<p><label for="item_bedrijfsnaam">Bedrijfsnaam</label><input type="text" name="item_bedrijfsnaam" id="item_bedrijfsnaam" value="<?php echo $item_bedrijfsnaam ?>" /><span class="feedback"><?php echo $item_bedrijfsnaam_feedback ?></span></p>
+		<p><label for="item_voornaam">Voornaam *</label><input type="text" name="item_voornaam" id="item_voornaam" value="<?php echo $item_voornaam ?>" /><span class="feedback"><?php echo $item_voornaam_feedback ?></span></p>
+		<p><label for="item_tussenvoegsel">Tussenvoegsel</label><input type="text" name="item_tussenvoegsel" id="item_tussenvoegsel" value="<?php echo $item_tussenvoegsel ?>" /><span class="feedback"><?php echo $item_tussenvoegsel_feedback ?></span></p>
+		<p><label for="item_achternaam">Achternaam *</label><input type="text" name="item_achternaam" id="item_achternaam" value="<?php echo $item_achternaam ?>" /><span class="feedback"><?php echo $item_achternaam_feedback ?></span></p>
+		<p><label for="item_geslacht">Geslacht</label><input type="radio" name="item_geslacht" value="man" <?php if($item_geslacht == 'man') echo 'checked'; ?> /> Man <input type="radio" name="item_geslacht" value="vrouw" <?php if($item_geslacht == 'vrouw') echo 'checked'; ?> /> Vrouw <span class="feedback"><?php echo $item_geslacht_feedback ?></span></p>
+		<p><label for="item_geboortedatum">Geboortedatum</label><input type="text" name="item_geboortedatum_dag" id="item_geboortedatum" value="<?php echo $item_geboortedatum_dag ?>" maxlength="2" class="datum_smal" /><input type="text" name="item_geboortedatum_maand" value="<?php echo $item_geboortedatum_maand ?>" maxlength="2" class="datum_smal" /><input type="text" name="item_geboortedatum_jaar" value="<?php echo $item_geboortedatum_jaar ?>" maxlength="4" class="datum_breed" /><span class="feedback"><?php echo $item_geboortedatum_feedback ?></span></p>
+		<p><label for="item_adres">Adres</label><input type="text" name="item_adres" id="item_adres" value="<?php echo $item_adres ?>" /><span class="feedback"><?php echo $item_adres_feedback ?></span></p>
+		<p><label for="item_postcode">Postcode</label><input type="text" name="item_postcode_cijfers" id="item_postcode" value="<?php echo $item_postcode_cijfers ?>" maxlength="4" class="postcode_breed" /><input type="text" name="item_postcode_letters" value="<?php echo $item_postcode_letters ?>" maxlength="2" class="postcode_smal" /><span class="feedback"><?php echo $item_postcode_feedback ?></span></p>
+		<p><label for="item_plaats">Plaats</label><input type="text" name="item_plaats" id="item_plaats" value="<?php echo $item_plaats ?>" /><span class="feedback"><?php echo $item_plaats_feedback ?></span></p>
+		<p><label for="item_telefoonnummer">Telefoonnummer</label><input type="text" name="item_telefoonnummer" id="item_telefoonnummer" value="<?php echo $item_telefoonnummer ?>" /><span class="feedback"><?php echo $item_telefoonnummer_feedback ?></span></p>
+		<p><label for="item_mobiel">Mobiel</label><input type="text" name="item_mobiel" id="item_mobiel" value="<?php echo $item_mobiel ?>" /><span class="feedback"><?php echo $item_mobiel_feedback ?></span></p>
+		<p><label for="item_emailadres">E-mailadres *</label><input type="text" name="item_emailadres" id="item_emailadres" value="<?php echo $item_emailadres ?>" /><span class="feedback"><?php echo $item_emailadres_feedback ?></span></p>
+		<p><label for="item_notities">Notities (intern)</label><textarea name="item_notities" id="item_notities"><?php echo $item_notities ?></textarea><span class="feedback"><?php echo $item_notities_feedback ?></span></p>
+		<p><label for="item_instelling_anoniem">Instelling anoniem</label><input type="radio" name="item_instelling_anoniem" value="ja" <?php if($item_instelling_anoniem == 'ja') echo 'checked'; ?> /> Ja <input type="radio" name="item_instelling_anoniem" value="nee" <?php if($item_instelling_anoniem == 'nee') echo 'checked'; ?> /> Nee <span class="feedback"><?php echo $item_instelling_anoniem_feedback ?></span></p>
+		<p><label for="item_instelling_email_updates">Instelling e-mail updates</label><input type="radio" name="item_instelling_email_updates" value="ja" <?php if($item_instelling_email_updates == 'ja') echo 'checked'; ?> /> Ja <input type="radio" name="item_instelling_email_updates" value="nee" <?php if($item_instelling_email_updates == 'nee') echo 'checked'; ?> /> Nee <span class="feedback"><?php echo $item_instelling_email_updates_feedback ?></span></p>
+		<p class="submit"><input type="submit" value="Deelnemer <?php echo $actie ?>" /> <a href="<?php echo base_url('cms/deelnemers/'.$item_ID) ?>" title="Annuleren">Annuleren</a> <?php if($actie == 'wijzigen'): ?>
+        <?php if($this->session->userdata('beheerder_rechten') == 'admin' || $this->session->userdata('beheerder_rechten') == 'support'): ?>
+            <a href="<?php echo base_url('cms/deelnemers/verwijderen/'.$item_ID) ?>" title="Verwijderen">Verwijderen</a><?php endif; ?></p>
+        <?php endif; ?>
+	</form>
+</div>

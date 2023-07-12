@@ -1,0 +1,2 @@
+ALTER TABLE `stem_workshops` CHANGE `workshop_zichtbaar` `workshop_zichtbaar_publiek` TINYINT(1) NOT NULL DEFAULT '1';
+ALTER TABLE `stem_workshops` ADD `workshop_zichtbaar_cursist` TINYINT(1) NOT NULL DEFAULT '1' AFTER `workshop_zichtbaar_publiek`;

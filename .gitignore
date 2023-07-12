@@ -1,0 +1,10 @@
+*.xml
+*.iml
+*.patch
+.htaccess
+assets/css/.ssas-cache/
+*.scssc
+.remote-sync.json
+.DS_Store
+.vscode/ftp-sync.json
+application/libraries/vendor/

@@ -1,0 +1,3352 @@
+@import "susy";
+
+$blauw: #009dc6;
+$groen: #27b400;
+$zwart: #231f20;
+$grijs: #777777;
+$rood: #f33;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: none;
+}
+
+#wrapper {
+  background-position: center top;
+  background-repeat: repeat-y;
+  width: 100%;
+  min-width: 1100px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+.wrapper {
+  width: 1060px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.titel {
+  display: none;
+}
+p {
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+p a {
+  color: #009dc6;
+  text-decoration: none;
+  cursor: pointer;
+}
+p a:hover {
+  color: #231f20;
+}
+
+button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: var(--sa-black);
+  margin: 0 0.25em 0 0;
+  padding: 0.75em 1.5em;
+  text-transform: none!important;
+  text-shadow: none;
+  font-weight: 400;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+}
+
+a.button {
+  display: block;
+  background: url("../images/button-achtergrond.png") 0 0 no-repeat;
+  width: 280px;
+  height: 70px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #fff;
+}
+a.button:hover {
+  background-position: 0 -75px;
+  color: #fff;
+}
+a.button-smal {
+  display: block;
+  background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+  width: 250px;
+  height: 70px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 55px;
+  color: #fff;
+}
+a.button-smal:hover {
+  background-position: 0 -75px;
+  color: #fff;
+}
+a.meer {
+  font-size: 16px;
+}
+img {
+  border: 0;
+}
+/* Header */
+header {
+  width: 100%;
+  height: 100px;
+}
+/* Content */
+#content {
+  width: 1060px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+#inhoud,
+#vimeo-chat {
+  padding: 0 1em;
+}
+/* Footer */
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+footer .navigatie nav {
+  display: block;
+  margin: 30px 0 0 55px;
+  float: left;
+}
+footer .navigatie nav a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 7px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+}
+footer .navigatie nav a:hover {
+  color: #009dc6;
+}
+footer .navigatie p {
+  display: block;
+  margin: 30px 60px 0 0;
+  float: left;
+  line-height: 30px;
+}
+footer .navigatie p a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 7px;
+  color: #777;
+}
+footer .navigatie p a:hover {
+  color: #009dc6;
+}
+footer .navigatie p#sociale-media {
+  margin-right: 10px;
+  padding-top: 3px;
+  padding: 0px 0px 0 60px;
+  overflow: hidden;
+}
+footer .navigatie p#sociale-media a#twitter {
+  display: block;
+  background: url("../images/icon-twitter.jpg") 0 0 no-repeat;
+  width: 43px;
+  height: 43px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  float: left;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+footer .navigatie p#sociale-media a#facebook {
+  display: block;
+  background: url("../images/icon-facebook.jpg") 0 0 no-repeat;
+  width: 43px;
+  height: 43px;
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+footer .iamstudios {
+  padding: 20px 60px 0 60px;
+}
+footer .iamstudios p {
+  font-size: 10px;
+}
+footer .iamstudios p a {
+  font-weight: 700;
+}
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix {
+  zoom: 1;
+}
+
+header {
+  #cursistenmodule {
+    float: left;
+
+    .logo {
+      margin-top: 10px;
+    }
+
+    h1 {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 80px;
+      color: #070707;
+
+      a {
+        font-weight: 700;
+        color: #009dc6;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  nav {
+    margin: 30px 0 0 0;
+    float: right;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: block;
+        float: left;
+        color: #000;
+        line-height: 40px;
+
+        a {
+          display: block;
+          float: left;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #000;
+
+          &.workshop-titel {
+            font-weight: normal;
+          }
+
+          &:hover,
+          &.active {
+            color: #009dc6;
+          }
+        }
+
+        span {
+          display: block;
+          margin: 0 10px;
+          float: left;
+        }
+
+        &#uitloggen {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+/* Content */
+
+#content {
+  /* Algemeen */
+  /* Aanmelden praktijkdag */
+  /* Dashboard */
+  /* Workshops & Producten */
+  /* Lessen */
+  /* Lessen > Les */
+  /* Audio */
+  /* Berichten */
+  /* Berichten */
+  /* Vragen */
+  /* Profiel */
+  /* Profiel > Instellingen wijzigen */
+
+  #tabbladen_workshops {
+    position: relative;
+    margin: -51px 0 40px 0;
+    overflow: hidden;
+    max-width: 960px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+      li {
+        display: block;
+        margin: 0 2px 0 0;
+        float: left;
+
+        a {
+          display: block;
+          background: #e1f1f5 url("../images/tabblad_workshop.gif") 0 0 repeat-x;
+          height: 30px;
+          padding: 0 10px;
+          line-height: 40px;
+          text-decoration: none;
+          color: #777;
+
+          &.active {
+            background: #009bc3 url("../images/tabblad_workshop.gif") 0 -33px repeat-x;
+            font-weight: 600;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 40px;
+    color: #000;
+  }
+
+  table {
+    &.lessen {
+      width: 100%;
+      margin: 30px 0 0 0;
+
+      tr {
+        /*
+
+    			.datum
+    			{
+    				width: 80px;
+    				text-align: right;
+    			}
+
+    			.tijd
+    			{
+    				width: 55px;
+    				text-align: right;
+    			}
+
+    			.locatie-iconen
+    			{
+    			}
+
+    			.status-iconen
+    			{
+    			}
+
+    			.locatie
+    			{
+    			}
+
+    			.status
+    			{
+    				padding-left: 40px;
+
+    			}
+    			*/
+
+        th {
+          font-size: 14px;
+          font-weight: 900;
+          text-align: left;
+          line-height: 25px;
+          color: #231f20;
+          padding-bottom: 20px;
+        }
+
+        td {
+          line-height: 25px;
+          border-bottom: 1px solid #d6d6d6;
+
+          &:first-child {
+            padding-left: 10px;
+          }
+        }
+
+        &:last-child td {
+          border: 0;
+        }
+
+        &.geweest td {
+          color: #009dc6;
+
+          a {
+            color: #009dc6;
+            text-decoration: none;
+
+            &:hover {
+              color: #231f20;
+            }
+          }
+        }
+
+        &.active td {
+          background: #b0e6f3;
+          color: #231f20;
+
+          a {
+            color: #231f20;
+            text-decoration: none;
+          }
+        }
+
+        &.breed {
+          .locatie {
+            width: 110px;
+
+            span {
+              display: block;
+              background: url("../images/icons-locatie.png") 0 0 no-repeat;
+              width: 23px;
+              height: 25px;
+              margin: 0 10px 0 0;
+              float: left;
+
+              &.studio {
+                background-position: 0 -25px;
+              }
+            }
+          }
+
+          .datum {
+            width: 80px;
+          }
+
+          .tijd {
+            width: 75px;
+          }
+
+          .status {
+            width: 180px;
+
+            span {
+              display: block;
+              background: url("../images/icons-huiswerk.png") 0 0 no-repeat;
+              width: 37px;
+              height: 25px;
+              margin: 0 10px 0 0;
+              float: left;
+
+              &.binnenkort {
+                background-position: 0 -25px;
+              }
+
+              &.insturen {
+                background-position: 0 -50px;
+              }
+
+              &.ingestuurd {
+                background-position: 0 -75px;
+              }
+
+              &.voldoende {
+                background-position: 0 -100px;
+              }
+
+              &.onvoldoende {
+                background-position: 0 -125px;
+              }
+
+              &.opnieuw-insturen {
+                background-position: 0 -150px;
+              }
+
+              &.opnieuw-ingestuurd {
+                background-position: 0 -175px;
+              }
+
+              &.opnieuw-voldoende {
+                background-position: 0 -200px;
+              }
+
+              &.opnieuw-onvoldoende {
+                background-position: 0 -225px;
+              }
+            }
+          }
+        }
+
+        &.smal {
+          .locatie {
+            width: 33px;
+
+            span {
+              display: block;
+              background: url("../images/icons-locatie.png") 0 0 no-repeat;
+              width: 23px;
+              height: 25px;
+              font-size: 0;
+              line-height: 0;
+              text-indent: -9999px;
+              overflow: hidden;
+
+              &.studio {
+                background-position: 0 -25px;
+              }
+            }
+          }
+
+          .datum {
+            width: 80px;
+          }
+
+          .tijd {
+            width: 55px;
+          }
+
+          .status {
+            width: 57px;
+
+            span {
+              display: block;
+              background: url("../images/icons-huiswerk.png") 0 0 no-repeat;
+              width: 37px;
+              height: 25px;
+              font-size: 0;
+              line-height: 0;
+              text-indent: -9999px;
+              overflow: hidden;
+
+              &.binnenkort {
+                background-position: 0 -25px;
+              }
+
+              &.insturen {
+                background-position: 0 -50px;
+              }
+
+              &.ingestuurd {
+                background-position: 0 -75px;
+              }
+
+              &.voldoende {
+                background-position: 0 -100px;
+              }
+
+              &.onvoldoende {
+                background-position: 0 -125px;
+              }
+
+              &.opnieuw-insturen {
+                background-position: 0 -150px;
+              }
+
+              &.opnieuw-ingestuurd {
+                background-position: 0 -175px;
+              }
+
+              &.opnieuw-voldoende {
+                background-position: 0 -200px;
+              }
+
+              &.opnieuw-onvoldoende {
+                background-position: 0 -225px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.praktijkdagen {
+      width: 100%;
+      margin: 0 0 16px 0;
+
+      tr {
+        td {
+          background: #f7f7f7;
+          padding-left: 10px;
+          border-bottom: 4px solid #fff;
+          font-size: 14px;
+          line-height: 30px;
+          color: #c1c1c1;
+
+          &.bullit {
+            background: #bfbfbf;
+            width: 4px;
+            border-right: 4px solid #fff;
+          }
+        }
+
+        &.active td {
+          background: #f0f0f0;
+          color: #009dc6;
+
+          &.bullit {
+            background: #009dc6;
+          }
+        }
+      }
+    }
+  }
+
+  #aanmelden_praktijkdag {
+    padding: 40px 0 0 0;
+    color: #035063;
+
+    p {
+      margin: 0 0 5px 0;
+
+      a {
+        display: block;
+        background: url("../images/button-praktijkdag.png") 0 0 no-repeat;
+        width: 149px;
+        height: 26px;
+        padding: 0 5px 0 0;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 28px;
+        color: #fff;
+
+        &:hover {
+          background-position: 0 -26px;
+        }
+      }
+    }
+  }
+
+  #komende-les {
+    width: 460px;
+    padding: 20px 0 0 0;
+    float: left;
+
+    h1 {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #231f20;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 20px;
+      color: #231f20;
+    }
+
+    #omschrijving {
+      background: url("../images/recent-nieuw-schaduw.png") center bottom
+        no-repeat;
+      padding: 20px 0 15px 0;
+    }
+
+    #huiswerk {
+      padding: 35px 0 35px 0;
+      width: auto;
+      float: left;
+    }
+  }
+
+  #agenda {
+    width: 460px;
+    padding: 20px 0 60px 0;
+    float: right;
+
+    h1 {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #231f20;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 20px;
+      color: #231f20;
+    }
+  }
+
+  #workshops,
+  #producten {
+    width: 940px;
+    padding: 15px 0 25px 0;
+  }
+
+  #workshops h2,
+  #producten h2 {
+    font-size: 21px;
+    line-height: 20px;
+    color: #231f20;
+    margin-bottom: 20px;
+  }
+
+  #workshops article,
+  #producten article {
+    background: url("../images/workshop-schaduw.png") left bottom no-repeat;
+    position: relative;
+    transition: background-color 0.5s ease;
+    min-height: 140px;
+    margin: 0 10px 25px;
+  }
+
+  #workshops article:hover,
+  #producten article:hover {
+    margin: -10px 0 25px;
+    padding: 10px 10px 0;
+    background: #f7f7f7;
+  }
+
+  #workshops article:hover .uitgelicht,
+  #producten article:hover .uitgelicht {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  #workshops article .uitgelicht,
+  #producten article .uitgelicht {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 125px;
+    width: 210px;
+  }
+
+  #workshops article hgroup,
+  #producten article hgroup {
+    display: block;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-left: 240px;
+  }
+
+  #workshops article hgroup h1,
+  #producten article hgroup h1 {
+    display: block;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #009dc6;
+  }
+
+  #workshops article hgroup h1 a,
+  #producten article hgroup h1 a {
+    color: #009dc6;
+    text-decoration: none;
+  }
+
+  #workshops article hgroup h1 a:hover,
+  #producten article hgroup h1 a:hover {
+    color: #000;
+  }
+
+  #workshops article hgroup h2,
+  #producten article hgroup h2 {
+    display: block;
+    margin-top: 9px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #231f20;
+  }
+
+  #workshops article .product-beschrijving,
+  #producten article .product-beschrijving,
+  #workshops article .inleiding,
+  #producten article .inleiding {
+    max-width: 600px;
+    padding-left: 240px;
+  }
+
+  #workshops article .product-beschrijving-lang-js,
+  #producten article .product-beschrijving-lang-js {
+    display: none;
+  }
+
+  #workshops article .meer-informatie,
+  #producten article .meer-informatie {
+    margin: 0;
+    padding-left: 240px;
+  }
+
+  #workshops article .clearfix,
+  #producten article .clearfix {
+    padding-left: 240px;
+  }
+
+  #workshops article .clearfix .prijs,
+  #producten article .clearfix .prijs {
+    display: inline-block;
+    width: 25%;
+    font-size: 20px;
+    line-height: 55px;
+    font-weight: 900;
+  }
+
+  #workshops article .clearfix .bestellen,
+  #producten article .clearfix .bestellen {
+    display: inline-block;
+  }
+
+  #workshops article .aanmelden,
+  #producten article .aanmelden {
+    margin-bottom: 10px;
+    float: right;
+  }
+
+  #workshops article .aanmelden a,
+  #producten article .aanmelden a {
+    text-decoration: none;
+  }
+
+  #workshops article .datum,
+  #producten article .datum {
+    font-size: 20px;
+    line-height: 55px;
+    text-align: right;
+    color: #009dc6;
+  }
+
+  #workshops article .datum strong,
+  #producten article .datum strong {
+    font-weight: 900;
+    color: #000;
+  }
+
+  #workshops article .datum .btw,
+  #producten article .datum .btw {
+    font-size: 12px;
+    font-weight: 400;
+    color: #777777;
+  }
+
+  #workshops ul li h3,
+  #producten ul li h3 {
+    display: block;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #009dc6;
+  }
+
+  #workshops ul li h3 a,
+  #producten ul li h3 a {
+    color: #009dc6;
+    text-decoration: none;
+  }
+
+  #workshops ul li h3 a:hover,
+  #producten ul li h3 a:hover {
+    color: #000;
+  }
+
+  #extra-workshops {
+    width: 960px;
+    padding: 15px 0 25px 0;
+    clear: both;
+    overflow: hidden;
+
+    h1 {
+      color: #231f20;
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 21px;
+      line-height: 20px;
+      color: #231f20;
+      margin-bottom: 20px;
+    }
+
+    .uitgelicht {
+      max-width: 100%;
+    }
+
+    h3 {
+      font-size: 21px;
+      line-height: 20px;
+      color: #231f20;
+      margin-bottom: 20px;
+    }
+
+    article {
+      background: url("../images/workshop-schaduw.png") left bottom no-repeat;
+      margin-bottom: 25px;
+      position: relative;
+      width: 300px;
+      // display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition: background-color 0.5s ease;
+
+      &:hover {
+        background: #f7f7f7;
+      }
+
+      h1 {
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #009dc6;
+        padding: 10px;
+        margin-bottom: 0;
+        height: 50px;
+
+        a {
+          color: #009dc6;
+          text-decoration: none;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+
+      .meer-informatie,
+      .inleiding {
+        padding: 10px;
+        margin-bottom: 0;
+      }
+
+      .button-smal {
+        margin: 10px;
+      }
+
+      &:nth-child(3n + 2) {
+        clear: both;
+      }
+    }
+  }
+}
+
+.plekken_beschikbaar {
+  background-color: #ff5f0d;
+  color: white;
+  display: inline-block;
+  padding: 0.5em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 1em;
+}
+
+.plekken_beschikbaar img {
+  float: left;
+  padding-right: 5px;
+  display: block;
+  margin: auto;
+  height: 10px;
+}
+
+#content {
+  #lessen {
+    padding: 20px 0 60px 0;
+
+    h1 {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+  }
+
+  #les h2 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #009dc6;
+  }
+  #player {
+    display: none;
+  }
+
+  .audio {
+    background: #009dc6 url("../images/audio_achtergrond.jpg") 0 0 repeat-x;
+    width: 458px;
+    height: 52px;
+    border: 1px solid #fff;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px #666;
+    font-size: 14px;
+    color: #fff;
+
+    .audio_titel {
+      position: absolute;
+      width: 298px;
+      height: 30px;
+      margin: 0 0 0 52px;
+      text-align: center;
+      line-height: 30px;
+    }
+
+    .audiojs {
+      background: none;
+      width: 458px !important;
+      height: 52px !important;
+
+      .play-pause {
+        background: url("../images/audio_buttons_achtergrond.gif") top right
+          no-repeat !important;
+        width: 40px !important;
+        height: 40px !important;
+        margin: 0 !important;
+        padding: 6px !important;
+        border: 0 !important;
+
+        p {
+          background: url("../images/audiobuttons.gif") 0 0 no-repeat;
+          width: 40px;
+          height: 40px;
+
+          &.play {
+            background-position: 0 -40px;
+          }
+
+          &.pause {
+            background-position: 0 -80px;
+          }
+
+          &.error {
+            background-position: 0 -120px;
+          }
+        }
+      }
+
+      .scrubber {
+        background: #46707b;
+        width: 264px;
+        height: 12px;
+        margin: 30px 10px 10px 10px;
+        padding: 0;
+        border: 0;
+
+        .progress {
+          background: #fff;
+        }
+
+        .loaded {
+          background: #009dc6;
+        }
+      }
+
+      .time {
+        background: url("../images/audio_buttons_achtergrond.gif") top left
+          no-repeat !important;
+        width: 122px;
+        height: 52px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: "Ruda", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        text-shadow: none;
+        line-height: 52px;
+        color: #fff;
+      }
+    }
+
+    &.verwijderen {
+      .audio_titel {
+        width: 232px;
+      }
+
+      .audio_verwijderen {
+        position: absolute;
+        background: url("../images/audio_buttons_achtergrond.gif");
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+        margin: 0 0 0 406px;
+
+        a {
+          display: block;
+          background: url("../images/audiobuttons.gif") 0 -120px no-repeat;
+          width: 40px;
+          height: 40px;
+          float: left;
+          cursor: pointer;
+          font-size: 0;
+          line-height: 0;
+          text-indent: -9999px;
+          overflow: hidden;
+        }
+      }
+
+      .audiojs .scrubber {
+        width: 212px;
+      }
+    }
+
+    &.voldoende {
+      background-position: 0 -52px;
+
+      .audiojs {
+        .play-pause {
+          background-position: right -52px !important;
+
+          p {
+            background-position: -40px 0;
+
+            &.play {
+              background-position: -40px -40px;
+            }
+
+            &.pause {
+              background-position: -40px -80px;
+            }
+
+            &.error {
+              background-position: -40px -120px;
+            }
+          }
+        }
+
+        .scrubber {
+          background: #145000;
+
+          .loaded {
+            background: #3ad204;
+          }
+        }
+
+        .time {
+          background-position: left -52px !important;
+        }
+      }
+    }
+
+    &.onvoldoende {
+      background-position: 0 -104px;
+
+      .audiojs {
+        .play-pause {
+          background-position: right -104px !important;
+
+          p {
+            background-position: -80px 0;
+
+            &.play {
+              background-position: -80px -40px;
+            }
+
+            &.pause {
+              background-position: -80px -80px;
+            }
+
+            &.error {
+              background-position: -80px -120px;
+            }
+          }
+        }
+
+        .scrubber {
+          background: #7d020d;
+
+          .loaded {
+            background: #f3162b;
+          }
+        }
+
+        .time {
+          background-position: left -104px !important;
+        }
+      }
+    }
+  }
+
+  #buttons {
+    background: url("../images/producten-schaduw.png") center bottom no-repeat;
+    padding: 20px 0;
+    margin: 0 0 20px 0;
+
+    p {
+      margin: 0;
+      overflow: hidden;
+
+      a,
+      input {
+        display: block;
+        box-sizing: content-box;
+        background: none;
+        height: 32px;
+        padding: 0 10px;
+        margin: 0 2px 0 0;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: 0;
+        float: left;
+        overflow: hidden;
+        cursor: pointer;
+        font-family: "Ruda", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        color: #000;
+      }
+
+      a.belangrijk,
+      input.belangrijk {
+        background: url("../images/button-belangrijk-achtergrond.png") 0 0
+          repeat-x;
+      }
+
+      a.belangrijk:hover,
+      input.belangrijk:hover {
+        background-position: 0 -32px;
+      }
+    }
+  }
+
+  table.berichten {
+    width: 100%;
+    margin: 30px 0 0 0;
+
+    tr {
+      &:hover td {
+        background: #b0e6f3;
+      }
+
+      th {
+        font-size: 14px;
+        font-weight: 900;
+        text-align: left;
+        line-height: 25px;
+        color: #231f20;
+        padding-bottom: 20px;
+      }
+
+      td {
+        line-height: 25px;
+        border-bottom: 1px solid #d6d6d6;
+
+        a {
+          color: #6c6b6b;
+          text-decoration: none;
+        }
+
+        &.beantwoord.ja {
+          background: url("../images/bericht-beantwoord.gif");
+          width: 9px;
+        }
+      }
+
+      &:last-child td {
+        border: 0;
+      }
+
+      .nieuw {
+        width: 40px;
+        text-align: center;
+
+        .enveloppe {
+          display: block;
+          background: url("../images/icoon-enveloppe.png") 0 -34px no-repeat;
+          width: 23px;
+          height: 25px;
+          margin: 0 auto;
+          font-size: 0;
+          line-height: 0;
+          text-indent: -9999px;
+          overflow: hidden;
+
+          &.ja {
+            background: url("../images/icoon-enveloppe.png") 0 -4px no-repeat;
+          }
+        }
+      }
+
+      .datum {
+        width: 70px;
+        text-align: right;
+      }
+
+      .tijd {
+        width: 70px;
+        padding-right: 20px;
+        text-align: right;
+      }
+
+      .verwijderen {
+        width: 40px;
+
+        a {
+          display: block;
+          background: url("../images/icoon-verwijderen.png") 0 -2px no-repeat;
+          width: 22px;
+          height: 25px;
+          margin: 0 auto;
+          font-size: 0;
+          line-height: 0;
+          text-indent: -9999px;
+          overflow: hidden;
+
+          &:hover {
+            background-position: 0 -32px;
+          }
+        }
+      }
+    }
+  }
+
+  #berichten {
+    padding-bottom: 60px;
+
+    /* Berichten > Nieuw bericht */
+    /* Berichten > Bericht */
+
+    form p {
+      margin: 0 0 5px 0;
+      overflow: hidden;
+
+      label {
+        display: block;
+        width: 115px;
+        float: left;
+        font-weight: 900;
+        color: #231f20;
+        line-height: 25px;
+      }
+
+      select {
+        display: block;
+        background: #fff;
+        width: 340px;
+        height: 25px;
+        padding: 2px 0;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: 0;
+        float: left;
+        font-family: "Ruda", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #6c6b6b;
+      }
+
+      input[type="text"] {
+        display: block;
+        width: 322px;
+        height: 23px;
+        padding: 0 8px;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: 0;
+        float: left;
+        font-family: "Ruda", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+
+      textarea {
+        display: block;
+        width: 692px;
+        height: 219px;
+        padding: 2px 8px;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: 0;
+        resize: none;
+        overflow: auto;
+        float: left;
+        font-family: "Ruda", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #6c6b6b;
+      }
+
+      .mce-tinymce {
+        float: left;
+      }
+    }
+
+    #bericht div {
+      overflow: hidden;
+    }
+
+    form p .mce-tinymce {
+      float: left;
+      box-sizing: border-box;
+    }
+
+    #bericht div {
+      .label {
+        display: block;
+        width: 115px;
+        float: left;
+        font-weight: 900;
+        color: #231f20;
+        line-height: 25px;
+      }
+
+      .tekst {
+        line-height: 25px;
+        width: 825px;
+        float: left;
+      }
+    }
+  }
+
+  #vragen {
+    h1 {
+      display: block;
+      width: 680px;
+      margin: 0 0 30px 0;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 40px;
+      color: #000;
+    }
+
+    ol {
+      margin: 0 0 50px 0;
+      padding: 0;
+
+      li {
+        font-weight: 900;
+        color: #231f20;
+        margin: 0 0 0 20px;
+        padding: 0;
+
+        a {
+          color: #231f20;
+
+          &:hover {
+            color: #009dc6;
+          }
+        }
+      }
+    }
+
+    article {
+      background: url("../images/overons-schaduw.png") left bottom no-repeat;
+      padding: 0 0 15px 0;
+      overflow: hidden;
+
+      .media {
+        padding: 40px 0 0 0;
+        float: right;
+      }
+
+      .vraag_antwoord {
+        width: 680px;
+        float: left;
+
+        h1 {
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 30px;
+          margin-bottom: 15px;
+          padding-top: 35px;
+        }
+      }
+    }
+
+    .contact {
+      display: block;
+      margin: 50px 0 130px 0;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 40px;
+      color: #009dc6;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #profiel {
+    overflow: hidden;
+
+    /* Profiel > Wijzigen */
+
+    #profiel_gegevens {
+      width: 620px;
+      padding: 15px 0 0 0;
+      float: left;
+
+      p {
+        font-size: 20px;
+        line-height: 28px;
+        color: #000;
+      }
+    }
+
+    form {
+      padding: 20px 0 0 0;
+
+      p {
+        margin: 0 0 5px 0;
+        overflow: hidden;
+
+        label {
+          display: block;
+          width: 140px;
+          line-height: 25px;
+          float: left;
+        }
+
+        input {
+          &[type="text"],
+          &[type="password"] {
+            display: block;
+            width: 482px;
+            height: 23px;
+            padding: 0 8px;
+            margin: 0 10px 0 0;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
+            outline: 0;
+            float: left;
+            font-family: "Ruda", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 25px;
+            color: #6c6b6b;
+          }
+
+          &[type="text"].datum_smal,
+          &[type="password"].datum_smal {
+            width: 40px;
+            padding: 0;
+            margin: 0 5px 0 0;
+            text-align: center;
+          }
+
+          &[type="text"].datum_breed,
+          &[type="password"].datum_breed {
+            width: 60px;
+            padding: 0;
+            text-align: center;
+          }
+        }
+
+        .radio_buttons {
+          margin: 0 10px 0 0;
+          float: left;
+        }
+
+        &.feedback {
+          padding-left: 140px;
+          color: #f33;
+        }
+
+        input[type="submit"] {
+          display: block;
+          background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+          width: 260px;
+          height: 75px;
+          margin: 20px 0 135px 385px;
+          padding: 0 20px 20px 0;
+          border: 0;
+          border-radius: 0;
+          outline: 0;
+          cursor: pointer;
+          font-size: 20px;
+          line-height: 55px;
+          text-align: center;
+          color: #fff;
+
+          &:hover {
+            background-position: 0 -75px;
+          }
+        }
+
+        .feedback {
+          display: block;
+          float: left;
+          line-height: 25px;
+          color: #f33;
+        }
+
+        &.verplicht {
+          color: #009dc6;
+          padding-left: 140px;
+        }
+      }
+    }
+  }
+
+  #profiel_instellingen form {
+    padding: 20px 0 0 0;
+
+    p {
+      &.feedback {
+        padding-top: 10px;
+        color: #f33;
+      }
+    }
+
+    #instellingen p {
+      display: block;
+      width: 620px;
+      margin: 0;
+      border-bottom: 1px solid #ccc;
+      line-height: 50px;
+      overflow: hidden;
+
+      &:first-child {
+        border-top: 1px solid #ccc;
+      }
+
+      label {
+        float: left;
+      }
+
+      .radios {
+        display: block;
+        float: right;
+      }
+    }
+  }
+
+  #aanmelden #stappen ol,
+  #bestellen #stappen ol {
+    display: block;
+    background: #fafafa;
+    width: 918px;
+    height: 48px;
+    margin: 0 0 40px 0;
+    padding: 0 0 0 20px;
+    border: 1px solid #d9d9d9;
+    overflow: hidden;
+  }
+
+  #aanmelden #stappen ol li,
+  #bestellen #stappen ol li {
+    display: block;
+    background: url("../images/aanmelden-pijl.gif") left center no-repeat;
+    height: 48px;
+    margin: 0 70px 0 0;
+    padding: 0 0 0 30px;
+    list-style: none;
+    float: left;
+    color: #9a9a9a;
+    line-height: 48px;
+  }
+
+  #aanmelden #stappen ol li a,
+  #bestellen #stappen ol li a {
+    font-weight: 400;
+    color: #231f20;
+  }
+
+  #aanmelden #stappen ol li a:hover,
+  #bestellen #stappen ol li a:hover {
+    color: #009dc6;
+  }
+
+  #aanmelden #stappen ol li:first-child,
+  #bestellen #stappen ol li:first-child {
+    background: none;
+    padding: 0;
+  }
+
+  #aanmelden #stappen ol li.active,
+  #bestellen #stappen ol li.active {
+    font-weight: 900;
+    color: #231f20;
+  }
+
+  #uitleg p {
+    width: 660px;
+  }
+
+  #formulier_vraag {
+    padding: 0 0 10px 160px;
+  }
+
+  #formulier_lang {
+    h3 {
+      padding-left: 160px;
+    }
+
+    .startdatum {
+      display: block;
+      line-height: 25px;
+      float: left;
+    }
+
+    &.onzichtbaar {
+      display: none;
+    }
+  }
+
+  #formulier_kort {
+    display: none;
+
+    h3 {
+      padding-left: 160px;
+    }
+
+    .startdatum {
+      display: block;
+      line-height: 25px;
+      float: left;
+    }
+
+    &.zichtbaar {
+      display: block;
+    }
+  }
+
+  #aanmelden h1,
+  #bestellen h1 {
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 40px;
+    color: #009dc6;
+    margin-bottom: 20px;
+  }
+
+  #aanmelden h2,
+  #bestellen h2 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #009dc6;
+  }
+
+  #aanmelden h3,
+  #bestellen h3 {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 20px;
+    color: #231f20;
+  }
+
+  #aanmelden table,
+  #bestellen table {
+    margin: 0 0 20px 0;
+  }
+
+  #aanmelden form p,
+  #bestellen form p {
+    margin: 0 0 5px 0;
+    overflow: hidden;
+  }
+
+  #aanmelden form p label,
+  #bestellen form p label {
+    display: block;
+    width: 160px;
+    line-height: 25px;
+    float: left;
+  }
+
+  #aanmelden form p input {
+    &[type="text"],
+    &[type="password"] {
+      display: block;
+      width: 478px;
+      height: 23px;
+      margin: 0;
+      padding: 0 10px;
+      border: 1px solid #e2e2e2;
+      outline: 0;
+      float: left;
+      font-family: "Ruda", sans-serif;
+      font-size: 14px;
+      color: #777;
+    }
+  }
+
+  #bestellen form p input {
+    &[type="text"],
+    &[type="password"] {
+      display: block;
+      width: 478px;
+      height: 23px;
+      margin: 0;
+      padding: 0 10px;
+      border: 1px solid #e2e2e2;
+      outline: 0;
+      float: left;
+      font-family: "Ruda", sans-serif;
+      font-size: 14px;
+      color: #777;
+    }
+  }
+
+  #producten form p input[type="submit"] {
+    display: block;
+    background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+    width: 260px;
+    height: 55px;
+    margin: 20px 0 135px 405px;
+    padding: 0 20px 20px 0;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+
+    &:hover {
+      background-position: 0 -75px;
+    }
+  }
+
+  #aanmelden form p input[type="text"]#aanmelden_geboortedatum_dag {
+    width: 36px;
+    padding: 0;
+    margin-right: 5px;
+    text-align: center;
+  }
+}
+
+#uitgebreide_les {
+  margin-bottom: 20px;
+}
+
+#uitgebreide_les h3 {
+  text-transform: uppercase;
+  color: #000;
+}
+
+.link-wrapper {
+  overflow: hidden;
+}
+
+#uitgebreid_huiswerk h3 {
+  text-transform: uppercase;
+  color: #000;
+}
+
+#content {
+  .meta {
+    font-size: 125%;
+    text-transform: uppercase;
+  }
+
+  #les {
+    h3 {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 20px;
+      color: #231f20;
+      margin-bottom: 20px;
+    }
+
+    #omschrijving {
+      @include span(1 of 2 first);
+      padding: 20px 0 60px 0;
+
+      #media .media p {
+        img {
+          display: block;
+          width: auto;
+          max-width: 100%;
+        }
+
+        &.pdf {
+          display: block;
+          background: url("../images/icon-pdf.jpg") no-repeat;
+          height: 77px;
+          line-height: 50px;
+          padding: 0 0 0 60px;
+        }
+      }
+    }
+  }
+}
+
+#huiswerk {
+  @include span(1 of 2 last);
+  padding: 20px 0 60px 0;
+
+  form {
+    padding: 10px 0 0 0;
+
+    p {
+      margin: 0 0 5px 0;
+      overflow: hidden;
+      line-height: 25px;
+
+      label {
+        display: block;
+        width: 115px;
+        float: left;
+        color: #231f20;
+        line-height: 35px;
+      }
+
+      input[type="text"] {
+        display: block;
+        width: 325px;
+        height: 33px;
+        padding: 0 8px;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: 0;
+        float: left;
+        font-family: "Ruda", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        color: #6c6b6b;
+      }
+
+      input[type=text] ::-webkit-input-placeholder {
+        /* Edge */
+        color: #6c6b6b;
+      }
+      input[type=text] :-ms-input-placeholder {
+        /* Internet Explorer */
+        color: #6c6b6b;
+      }
+
+      input[type=text] ::placeholder {
+        color: #6c6b6b;
+      }
+
+      #browse {
+        width: 325px;
+        height: 33px;
+        padding: 0 8px;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: 0;
+        float: left;
+        line-height: 33px;
+      }
+
+      input[type="submit"] {
+        &#uploaden {
+          display: block;
+          background: url("../images/button_uploaden.png");
+          width: 271px;
+          height: 69px;
+          margin: 15px 0 0 112px;
+          padding: 0 21px 14px 3px;
+          border: 0;
+          border-radius: 0;
+          outline: 0;
+          cursor: pointer;
+          font-family: "Ruda", sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          text-align: center;
+          line-height: 59px;
+          color: #fff;
+
+          &:hover {
+            background-position: 0 -69px;
+          }
+        }
+
+        &#insturen {
+          display: block;
+          background: url("../images/button-achtergrond-smal.png") 0 0
+            no-repeat;
+          width: 270px;
+          height: 75px;
+          margin: 0;
+          padding: 0 20px 20px 0;
+          border: 0;
+          border-radius: 0;
+          outline: 0;
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: 400;
+          text-align: center;
+          line-height: 55px;
+          color: #fff;
+
+          &:hover {
+            background-position: 0 -75px;
+          }
+        }
+      }
+    }
+  }
+
+  #feedback {
+    padding: 0 0 0 115px;
+    margin-bottom: 1em;
+    color: #f33;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  #toegevoegd {
+    position: absolute;
+    width: auto;
+    height: 55px;
+    margin: -74px 0 0 373px;
+    text-transform: uppercase;
+    line-height: 55px;
+    color: #231f20;
+  }
+}
+
+
+/* Aanmelden / Bestellen */
+
+#aanmelden form p input[type="text"]#aanmelden_geboortedatum_maand,
+#content #bestellen form p input[type="text"]#bestellen_geboortedatum_dag,
+#bestellen form p input[type="text"]#bestellen_geboortedatum_maand {
+  width: 36px;
+  padding: 0;
+  margin-right: 5px;
+  text-align: center;
+}
+
+#content {
+  #aanmelden form p input[type="text"]#aanmelden_geboortedatum_jaar,
+  #bestellen form p input[type="text"]#bestellen_geboortedatum_jaar {
+    width: 50px;
+    padding: 0;
+    text-align: center;
+  }
+
+  #aanmelden form p #geslacht_container,
+  #bestellen form p #geslacht_container {
+    display: block;
+    width: 138px;
+    height: 25px;
+    float: left;
+  }
+
+  p.akkoord_container {
+    padding: 10px 0 0 160px;
+    line-height: 25px;
+    overflow: hidden;
+
+    .akkoord {
+      display: block;
+      float: left;
+    }
+
+    a {
+      color: #777;
+      text-decoration: underline;
+
+      &:hover {
+        color: #009dc6;
+      }
+    }
+  }
+
+  form p .feedback {
+    display: block;
+    margin: 0 0 0 10px;
+    float: left;
+    color: #f33;
+    line-height: 25px;
+  }
+
+  #aanmelden form p input[type="submit"],
+  #bestellen form p input[type="submit"] {
+    display: block;
+    background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+    width: 260px;
+    height: 55px;
+    margin: 20px 0 135px 405px;
+    padding: 0 20px 20px 0;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+  }
+
+  #aanmelden form p input[type="submit"]:hover,
+  #bestellen form p input[type="submit"]:hover {
+    background-position: 0 -75px;
+  }
+
+  #aanmelden {
+    #producten {
+      padding: 10px 0 40px 0;
+
+      article {
+        background: url("../images/producten-schaduw.png") 0 bottom no-repeat;
+        margin: 0 0 40px 0;
+        padding: 0 0 5px 0;
+
+        h1 {
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 30px;
+          color: #009dc6;
+        }
+
+        p {
+          margin-bottom: 25px;
+        }
+
+        .media {
+          width: 300px;
+          height: 185px;
+          border: 1px solid #d9d9d9;
+          float: right;
+        }
+
+        .tekst {
+          width: 480px;
+          float: left;
+        }
+
+        .prijs {
+          font-size: 20px;
+          font-weight: 900;
+          line-height: 30px;
+          text-align: right;
+          color: #231f20;
+          padding: 0 250px 0 0;
+          float: right;
+        }
+
+        .annulering_prijs {
+          font-size: 20px;
+          font-weight: 900;
+          line-height: 30px;
+          text-align: center;
+          color: #231f20;
+        }
+
+        .bestellen {
+          font-size: 20px;
+          line-height: 30px;
+          color: #231f20;
+          float: left;
+        }
+      }
+    }
+
+    #afleveradres p strong {
+      display: block;
+      font-weight: 900;
+      color: #231f20;
+      padding-bottom: 20px;
+    }
+
+    #gegevens {
+      width: 660px;
+    }
+  }
+
+  #bestellen #gegevens {
+    width: 660px;
+  }
+
+  #aanmelden #gegevens table tr th,
+  #bestellen #gegevens table tr th,
+  #aanmelden #gegevens table tr td,
+  #bestellen #gegevens table tr td {
+    line-height: 30px;
+    border-bottom: 1px solid #eee;
+  }
+
+  #aanmelden #gegevens table tr th,
+  #bestellen #gegevens table tr th {
+    width: 160px;
+    font-weight: 400;
+    text-align: left;
+    color: #231f20;
+  }
+
+  #aanmelden #gegevens table tr:first-child th,
+  #bestellen #gegevens table tr:first-child th,
+  #aanmelden #gegevens table tr:first-child td,
+  #bestellen #gegevens table tr:first-child td {
+    border-top: 1px solid #eee;
+  }
+
+  #aanmelden #bestelling,
+  #bestellen #bestelling {
+    width: 660px;
+  }
+
+  #aanmelden #bestelling table tr td,
+  #bestellen #bestelling table tr td {
+    background: url("../images/bestelling-check.gif") 0 0 no-repeat;
+    font-size: 22px;
+    line-height: 40px;
+    color: #009dc6;
+    padding-left: 30px;
+    border-top: 1px solid #eee;
+  }
+
+  #aanmelden #bestelling table tr td.prijs,
+  #bestellen #bestelling table tr td.prijs {
+    background: none;
+    text-align: right;
+  }
+
+  #aanmelden #bestelling table tr td.prijs .btw,
+  #bestellen #bestelling table tr td.prijs .btw {
+    font-size: 12px;
+    font-weight: 400;
+    color: #777777;
+  }
+
+  #aanmelden #bestelling table tr.totaal td,
+  #bestellen #bestelling table tr.totaal td {
+    background: none;
+    font-weight: 900;
+    color: #231f20;
+    padding: 0;
+  }
+}
+
+/* Aanmelden > Producten */
+
+/* Aanmelden > Bevestigen */
+
+#les {
+  #omschrijving #toevoegen_wijzigen form p input[type="submit"] {
+    display: block;
+    background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+    width: 270px;
+    height: 75px;
+    margin: 0;
+    padding: 0 20px 20px 0;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+  }
+
+  &.clearfix #omschrijving #toevoegen_wijzigen.formulier form {
+    .aanwezigheid {
+      margin: auto;
+      width: 95%;
+      border-radius: 4px;
+      float: left;
+      border: 2px solid grey;
+      padding: 10px;
+      margin-bottom: 20px;
+
+      span {
+        vertical-align: sub;
+
+        &.submit input {
+          float: right;
+          background-color: #18b5cf;
+          clear: both;
+          border: 0 none;
+          border-radius: 4px;
+          transition: all 0.23s ease-in-out 0s;
+          color: #ffffff;
+          cursor: pointer;
+          // display: inline-block;
+          font-size: 15px;
+          font-weight: normal;
+          height: 32px;
+          line-height: 32px;
+          padding: 0 22px;
+          text-align: center;
+          text-decoration: none;
+          vertical-align: top;
+          white-space: nowrap;
+          width: auto;
+
+          &:hover {
+            background-color: #009dc6;
+          }
+        }
+      }
+    }
+
+    div.aanwezigheid {
+      width: 95%;
+      line-height: 30px;
+    }
+
+    .aanwezigheid {
+      margin: auto;
+      width: 95%;
+      border-radius: 4px;
+      float: left;
+      border: 2px solid grey;
+      padding: 10px;
+      margin-bottom: 20px;
+
+      span {
+        vertical-align: sub;
+
+        &.submit input {
+          float: right;
+          background-color: #18b5cf;
+          clear: both;
+          border: 0 none;
+          border-radius: 4px;
+          transition: all 0.23s ease-in-out 0s;
+          color: #ffffff;
+          cursor: pointer;
+          // display: inline-block;
+          font-size: 15px;
+          font-weight: normal;
+          height: 32px;
+          line-height: 32px;
+          padding: 0 22px;
+          text-align: center;
+          text-decoration: none;
+          vertical-align: top;
+          white-space: nowrap;
+          width: auto;
+
+          &:hover {
+            background-color: #009dc6;
+          }
+        }
+      }
+    }
+
+    div.aanwezigheid {
+      width: 95%;
+      line-height: 30px;
+    }
+  }
+}
+
+ul.tab {
+  width: 102.6%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+
+  li {
+    float: left;
+
+    a {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px;
+
+      &:hover {
+        background-color: #ddd;
+      }
+
+      &:focus {
+        background-color: #ccc;
+      }
+    }
+  }
+}
+
+/* Float the list items side by side */
+
+/* Style the links inside the list items */
+
+/* Change background color of links on hover */
+
+/* Create an active/current tablink class */
+
+// .active {
+//   background-color: #ccc;
+// }
+
+/* Style the tab content */
+
+.tabcontent {
+  width: 100%;
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+#content .tabel tr td {
+  &.archiveren {
+    width: 22px;
+    padding-left: 5px;
+
+    a {
+      display: block;
+      background: url(../images/icon-archive.png);
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      font-size: 0;
+      line-height: 0;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+  }
+
+  &.dearchiveren {
+    width: 22px;
+    padding-left: 5px;
+
+    a {
+      display: block;
+      background: url(../images/icon-dearchive.png);
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      font-size: 0;
+      line-height: 0;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+  }
+}
+
+#recordingslist {
+  display: block;
+}
+
+#audio_record > label {
+  display: block;
+  margin-bottom: 40px;
+  width: 115px;
+  float: left;
+  color: #231f20;
+  line-height: 35px;
+}
+
+#button_opnemen {
+  background-color: #27b400;
+  color: white;
+  padding: 10px;
+  margin-right: 4px;
+  margin-bottom: 20px;
+}
+
+#button_stop {
+  background-color: #ff3848;
+  color: white;
+  padding: 10px;
+}
+
+#button_opnemen:disabled {
+  background-color: #27b400;
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: white;
+  padding: 10px;
+}
+
+#button_stop:disabled {
+  background-color: #ff3848;
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#recordingslist p {
+  line-height: 15px !important;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  width: 10em;
+
+  input {
+    position: absolute;
+    left: -999999px;
+  }
+
+  label {
+    display: inline-block;
+    font-size: 0;
+  }
+
+  > label {
+    &:before {
+      position: relative;
+      font: 24px/1 FontAwesome;
+      display: block;
+      content: "\f005";
+      color: #ccc;
+      background: -webkit-linear-gradient(-45deg, #d9d9d9 0%, #b3b3b3 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:hover {
+      &:before,
+      ~ label:before {
+        color: #f0ad4e;
+        background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &.selected {
+      &:before,
+      ~ label:before {
+        color: #f0ad4e;
+        background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.vorige_les_rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  width: 10em;
+
+  input {
+    position: absolute;
+    left: -999999px;
+  }
+
+  label {
+    display: inline-block;
+    font-size: 0;
+  }
+
+  > label {
+    &:before {
+      position: relative;
+      font: 24px/1 FontAwesome;
+      display: block;
+      content: "\f005";
+      color: #ccc;
+      background: -webkit-linear-gradient(-45deg, #d9d9d9 0%, #b3b3b3 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &:hover {
+      &:before,
+      ~ label:before {
+        color: #f0ad4e;
+        background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &.selected {
+      &:before,
+      ~ label:before {
+        color: #f0ad4e;
+        background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.white-button {
+  border-radius: 15px;
+  border: 1px solid #000;
+  padding: 15px 30px 15px 30px;
+  cursor: pointer;
+  color: #000;
+}
+
+#tab {
+  list-style: none;
+  cursor: pointer;
+  -webkit-padding-start: 0px;
+  padding: 0px !important;
+
+  label {
+    border-radius: 15px;
+    border: 1px solid #000;
+    padding: 15px 50px 15px 30px;
+    cursor: pointer;
+  }
+
+  li {
+    &.active {
+      background-color: #ccc0;
+    }
+
+    div.content {
+      display: none;
+    }
+
+    &.active div.content {
+      display: inherit;
+    }
+  }
+
+  > li.active > label > span.arrow {
+    transform: rotate(90deg);
+  }
+}
+
+.iamstudios .privacy_link a {
+  color: gray;
+  text-decoration-color: gray;
+  text-decoration: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mymodal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close-modal {
+  display: block;
+  background: #231f20;
+  padding: 0 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  line-height: 30px;
+  color: #fff;
+  float: right;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+
+  h3,
+  p,
+  h4 {
+    margin: 0 0 20px 20px;
+  }
+}
+
+/* The Close Button */
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.rating_opmerking {
+  display: none;
+  margin: 0 20px 0 20px;
+
+  h4 {
+    margin-top: 0px;
+  }
+}
+
+#beoordeling_tekst {
+  width: 100%;
+  height: 50px;
+}
+
+.algemeen {
+  display: block;
+  background: #231f20;
+  padding: 0 10px;
+  margin: 10px 0 0 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  line-height: 30px;
+  color: #fff;
+}
+
+.kandidaat_welkom_tekst {
+  margin-bottom: 20px;
+
+  p {
+    margin: 10px 0px 0px 0px;
+  }
+}
+
+#content #aanmelden #producten article .annulering_prijs {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 30px;
+  text-align: center;
+  color: #231f20;
+}
+
+/* cursistenmodule update */
+
+#content_uitgebreid {
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+}
+
+#uitgebreid_huiswerk {
+  padding: 20px 0 60px 0;
+  display: block;
+
+  form {
+    padding: 10px 0 0 0;
+
+    p {
+      margin: 0 0 5px 0;
+      overflow: hidden;
+      line-height: 25px;
+
+      label {
+        display: block;
+        width: 115px;
+        float: left;
+        color: #231f20;
+        line-height: 35px;
+      }
+
+      input[type="text"] {
+        display: block;
+        width: 325px;
+        height: 33px;
+        padding: 0 8px;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: 0;
+        float: left;
+        font-family: "Ruda", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        color: #6c6b6b;
+      }
+
+      input[type=text] ::-webkit-input-placeholder {
+        /* Edge */
+        color: #6c6b6b;
+      }
+      input[type=text] :-ms-input-placeholder {
+        /* Internet Explorer */
+        color: #6c6b6b;
+      }
+      input[type=text] ::placeholder {
+        color: #6c6b6b;
+      }
+
+      #browse {
+        width: 325px;
+        height: 33px;
+        padding: 0 8px;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: 0;
+        float: left;
+        line-height: 33px;
+      }
+
+      input[type="submit"] {
+        &#uploaden {
+          display: block;
+          background: url("../images/button_uploaden.png");
+          width: 271px;
+          height: 69px;
+          margin: 15px 0 0 112px;
+          padding: 0 21px 14px 3px;
+          border: 0;
+          border-radius: 0;
+          outline: 0;
+          cursor: pointer;
+          font-family: "Ruda", sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          text-align: center;
+          line-height: 59px;
+          color: #fff;
+
+          &:hover {
+            background-position: 0 -69px;
+          }
+        }
+
+        &#insturen {
+          display: block;
+          background: url("../images/button-achtergrond-smal.png") 0 0 no-repeat;
+          width: 270px;
+          height: 75px;
+          margin: 0;
+          padding: 0 20px 20px 0;
+          border: 0;
+          border-radius: 0;
+          outline: 0;
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: 400;
+          text-align: center;
+          line-height: 55px;
+          color: #fff;
+
+          &:hover {
+            background-position: 0 -75px;
+          }
+        }
+      }
+    }
+
+    #toegevoegd {
+      position: absolute;
+      width: auto;
+      height: 55px;
+      margin: -74px 0 0 373px;
+      text-transform: uppercase;
+      line-height: 55px;
+      color: #231f20;
+    }
+  }
+
+  #feedback {
+    padding: 0 0 0 115px;
+    margin-bottom: -10px;
+    color: #f33;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.dropbtn {
+  color: black;
+  border: none;
+  cursor: pointer;
+  float: none;
+  background-color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.links-workshops a {
+  color: #009bc3;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 170px;
+  float: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  line-height: 20px;
+  right: 0px;
+
+  .active {
+    color: orange;
+    background-color: white;
+  }
+
+  a {
+    color: black;
+    font-weight: normal;
+    padding: 5px 16px;
+    float: none;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      background-color: #f1f1f1;
+      color: orange;
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+a span {
+  &#nieuw {
+    color: #fff;
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: text-bottom;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    float: right;
+    background: #c23b17;
+    margin: 2px 0 0;
+  }
+
+  &#profile {
+    background: url("../images/avatar.jpg") 0 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    margin: 8px 8px 8px 3px;
+    float: right;
+
+    &.has-badge {
+      background: url("../images/avatar-has-badge.jpg") 0 0 no-repeat;
+    }
+  }
+}
+
+.video-header {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.vimeo-video-container {
+  padding-bottom: 56.25%;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.vimeo-iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#vimeo-chat-iframe {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  transition: display 1s ease-in-out;
+}
+
+#vimeo-chat-iframe.closed {
+  display: none;
+}
+
+#toggle-vimeo-chat .closed,
+#toggle-vimeo-chat.closed .open {
+  display: none;
+}
+
+#toggle-vimeo-chat.closed .closed,
+#toggle-vimeo-chat .open {
+  display: inline-block;
+}
+
+.video-header-omschrijving {
+  p {
+    max-width: 80%;
+    float: left;
+  }
+
+  .rating {
+    float: right;
+  }
+}
+
+.les {
+  padding: 1em 0;
+  transition: background-color 0.5s ease, margin 0.25s ease, padding 0.25s ease;
+
+  &:hover,
+  &.active {
+    background: #f7f7f7;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .locatie {
+    display: block;
+    background: url("../images/icons-locatie.png") 0 0 no-repeat;
+    width: 23px;
+    height: 25px;
+    margin: -2px 10px 0 0;
+    float: left;
+    text-indent: -9999px;
+
+    &.studio {
+      background-position: 0 -25px;
+    }
+  }
+}
+
+.les--links {
+  @include span(first 8 of 12);
+}
+
+.les--rechts {
+  @include span(last 3 of 12);
+  padding-top: 1em;
+}
+
+.text-decoration-none,
+.text-decoration-none:hover {
+  text-decoration: none;
+  color: #009dc6;
+}
+
+.les-documents {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.les-quiz {
+  height: 77px;
+}
+
+.les-document {
+  width: 160px;
+  margin-bottom: 3rem;
+}
+
+.document-pdf {
+  margin: 0 auto;
+  padding-right: 10px;
+}
+
+.huiswerk {
+  height: 300px;
+}
+
+.button-orange {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: orange;
+  padding: 5px 15px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 20px;
+  text-decoration: none;
+
+  &:hover {
+    background: darken(orange, 5%);
+  }
+}
+
+.button-grey {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: #d5d5d5;
+  padding: 5px 15px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 20px;
+  text-decoration: none;
+
+  &:hover {
+    background: darken(#d5d5d5, 5%);
+  }
+}
+
+.sidenav {
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  background-color: #111;
+  width: 0px;
+  overflow-x: hidden;
+  padding-top: 5px;
+  transition: 0.5s;
+}
+
+.sidenav-item {
+  position: relative;
+}
+
+.highlight {
+  position: absolute;
+  background-color: orange;
+  width: 5px;
+  height: 100%;
+}
+
+.sidenav {
+  a {
+    padding: 1em;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .titel {
+    font-size: 125%;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    display: block;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a:hover {
+    color: orange;
+  }
+
+  hr {
+    margin: 0 auto;
+    width: 90%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0)
+    );
+  }
+}
+
+.mySlides {
+  display: none;
+}
+
+.slide-center {
+  text-align: center;
+}
+
+.slide-section {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.slide-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+  background-color: #f1f1f1;
+  white-space: nowrap;
+}
+
+.s-button-orange {
+  color: #fff;
+  background-color: orange;
+
+  &:hover {
+    color: #fff;
+    background-color: orange;
+  }
+}
+
+hr.gradient {
+  margin: 0 auto;
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(178, 178, 178, 0.25),
+    rgba(178, 178, 178, 1),
+    rgba(178, 178, 178, 0.25)
+  );
+
+  &:last-child {
+    display: none;
+  }
+}
+
+img.placeholder {
+  width: 100%;
+}
+
+.studioles {
+  margin-top: 1em;
+
+  .datum-tijd {
+    @include span(1 of 3 first);
+  }
+
+  .adres {
+    @include span(1 of 3);
+  }
+
+  .huiswerk-status {
+    @include span(1 of 3 last);
+
+    span {
+      display: inline-block;
+      background: url("../images/icons-huiswerk.png") 0 0 no-repeat;
+      width: 37px;
+      height: 25px;
+      margin: -5px 0 0 10px;
+      vertical-align: middle;
+
+      &.binnenkort {
+        background-position: 0 -25px;
+      }
+
+      &.insturen {
+        background-position: 0 -50px;
+      }
+
+      &.ingestuurd {
+        background-position: 0 -75px;
+      }
+
+      &.voldoende {
+        background-position: 0 -100px;
+      }
+
+      &.onvoldoende {
+        background-position: 0 -125px;
+      }
+
+      &.opnieuw-insturen {
+        background-position: 0 -150px;
+      }
+
+      &.opnieuw-ingestuurd {
+        background-position: 0 -175px;
+      }
+
+      &.opnieuw-voldoende {
+        background-position: 0 -200px;
+      }
+
+      &.opnieuw-onvoldoende {
+        background-position: 0 -225px;
+      }
+    }
+  }
+}

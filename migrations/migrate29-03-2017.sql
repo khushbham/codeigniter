@@ -1,0 +1,1 @@
+ALTER TABLE `stem_gebruikers` ADD `gebruiker_notitie_verbergen` TINYINT NOT NULL DEFAULT '0' AFTER `gebruiker_notities`;

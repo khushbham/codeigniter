@@ -1,0 +1,1 @@
+ALTER TABLE `stem_workshops_producten` ADD `wanneer_beschikbaar` ENUM('altijd','na') NOT NULL DEFAULT 'altijd' AFTER `product_ID`;

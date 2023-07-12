@@ -1,0 +1,2 @@
+ALTER TABLE `stem_workshops` ADD `workshop_herinneringsmail` TEXT NOT NULL AFTER `welkomstmail_dagen_ervoor_versturen`;
+ALTER TABLE `stem_workshops` ADD `herinneringsmail_dagen_ervoor_versturen` INT NOT NULL AFTER `workshop_herinneringsmail`;

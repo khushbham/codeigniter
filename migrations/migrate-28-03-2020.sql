@@ -1,0 +1,1 @@
+ALTER TABLE `stem_groepen` ADD `groep_geautomatiseerde_mails` INT(1) NOT NULL DEFAULT '1' AFTER `groep_archief_datum`;

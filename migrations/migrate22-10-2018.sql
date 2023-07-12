@@ -1,0 +1,2 @@
+ALTER TABLE `stem_workshops` CHANGE `workshop_capayable` `workshop_in3` INT(1) NOT NULL DEFAULT '1';
+ALTER TABLE `stem_kortingscodes` CHANGE `kortingscode_capayable` `kortingscode_in3` INT(1) NOT NULL DEFAULT '1';

@@ -1,0 +1,1 @@
+ALTER TABLE `stem_groepen` ADD `groep_archiveren` INT(1) DEFAULT 0 AFTER `workshop_ID`;

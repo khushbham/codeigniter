@@ -1,0 +1,1 @@
+ALTER TABLE `stem_workshops` ADD `workshop_feedbackmail` TEXT NULL DEFAULT NULL AFTER `welkomstmail_dagen_ervoor_versturen`, ADD `feedbackmail_dagen_erna_versturen` INT NOT NULL AFTER `workshop_feedbackmail`;

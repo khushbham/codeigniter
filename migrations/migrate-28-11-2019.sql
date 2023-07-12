@@ -1,0 +1,1 @@
+INSERT INTO `stem_gegevens` (`gegeven_ID`, `gegeven_naam`, `gegeven_waarde`) VALUES ('11', 'onderhoud publieke site', 'nee'), ('12', 'onderhoud cursistenmodule', 'nee');

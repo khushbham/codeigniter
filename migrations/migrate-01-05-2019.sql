@@ -1,0 +1,1 @@
+ALTER TABLE `stem_groepen_lessen` ADD `docent_ID` INT NULL AFTER `les_ID`;
